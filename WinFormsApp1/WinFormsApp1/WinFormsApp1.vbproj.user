@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Exam_Time_Table\dep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmAutorize.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmBackOffice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmCamera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmCamera1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmCompany.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmDatabase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmEmailSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmLock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\FrmManualGeneration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmOption.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmSMSSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmSqlServerSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmSqlServerSetting2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frmSystemInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frm_course_reg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\frm_lev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Exam_Time_Table\Frm_TimeTable_genration_system.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
