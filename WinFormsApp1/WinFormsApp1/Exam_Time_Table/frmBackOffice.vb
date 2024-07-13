@@ -125,4 +125,20 @@ Public Class frmBackOffice
         Frm_TimeTable_genration_system.Dispose()
         Frm_TimeTable_genration_system.ShowDialog()
     End Sub
+
+    Private Sub RegistrationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrationToolStripMenuItem.Click
+        frmRegistration.Dispose()
+        frmRegistration.ShowDialog()
+    End Sub
+
+    Private Sub AboutUsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutUsToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub AddLevelToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddLevelToolStripMenuItem.Click
+        frm_lev.Dispose()
+        frm_lev.ShowDialog()
+    End Sub
+
+
 End Class

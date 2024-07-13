@@ -33,50 +33,7 @@ Module Inner_function_login
         decryptpwd = New [String](decoded_char)
         Return decryptpwd
     End Function
-    Sub ExportExcel(ByVal st As Object)
-        Dim officeType As Type = Type.GetTypeFromProgID("Excel.Application")
-        If officeType Is Nothing Then
-            MessageBox.Show("Microsoft Excel is not installed in this PC.", "", MessageBoxButtons.OK, MessageBoxIcon.Stop)
-            Exit Sub
-        End If
-        Dim rowsTotal, colsTotal As Short
-        Dim I, j, iC As Short
-        System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.WaitCursor
-        Dim xlApp As New Excel.Application
-        Try
-            Dim excelBook As Excel.Workbook = xlApp.Workbooks.Add
-            Dim excelWorksheet As Excel.Worksheet = CType(excelBook.Worksheets(1), Excel.Worksheet)
-            xlApp.Visible = True
 
-            rowsTotal = st.RowCount
-            colsTotal = st.Columns.Count - 1
-            With excelWorksheet
-                .Cells.Select()
-                .Cells.Delete()
-                For iC = 0 To colsTotal
-                    .Cells(1, iC + 1).Value = st.Columns(iC).HeaderText
-                Next
-                For I = 0 To rowsTotal - 1
-                    For j = 0 To colsTotal
-                        .Cells(I + 2, j + 1).value = st.Rows(I).Cells(j).Value
-                    Next j
-                Next I
-                .Rows("1:1").Font.FontStyle = "Bold"
-                .Rows("1:1").Font.Size = 12
-
-                .Cells.Columns.AutoFit()
-                .Cells.Select()
-                .Cells.EntireColumn.AutoFit()
-                .Cells(1, 1).Select()
-            End With
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            'RELEASE ALLOACTED RESOURCES
-            System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.Default
-            xlApp = Nothing
-        End Try
-    End Sub
     Sub LedgerSave(ByVal a As DateTime, ByVal b As String, ByVal c As String, ByVal d As String, ByVal e As Decimal, ByVal f As Decimal, ByVal g As String, ByVal h As String, ByVal i As String)
         con = New SqlConnection(cs)
         con.Open()

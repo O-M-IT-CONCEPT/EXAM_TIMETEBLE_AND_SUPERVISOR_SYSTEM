@@ -47,11 +47,11 @@ Public Class frmSqlServerSetting
 
                     Using sw As StreamWriter = New StreamWriter(Application.StartupPath & "\SQLSettings.dat")
                         If cmbAuthentication.SelectedIndex = 0 Then
-                            sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=WinFormsApp1_DB;Integrated Security=True;MultipleActiveResultSets=True")
+                            sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=DATA_PROCESSING;Integrated Security=True;MultipleActiveResultSets=True")
                             sw.Close()
                         End If
                         If cmbAuthentication.SelectedIndex = 1 Then
-                            sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=WinFormsApp1_DB;User ID=" & txtUserName.Text.Trim & ";Password=" & txtPassword.Text & ";MultipleActiveResultSets=True")
+                            sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=DATA_PROCESSING;User ID=" & txtUserName.Text.Trim & ";Password=" & txtPassword.Text & ";MultipleActiveResultSets=True")
                             sw.Close()
                         End If
                         If CheckBox1.Checked = False Then
@@ -89,11 +89,11 @@ Public Class frmSqlServerSetting
 
                 Using sw As StreamWriter = New StreamWriter(Application.StartupPath & "\SQLSettings.dat")
                     If cmbAuthentication.SelectedIndex = 0 Then
-                        sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=WinFormsApp1_DB;Integrated Security=True;MultipleActiveResultSets=True")
+                        sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=DATA_PROCESSING;Integrated Security=True;MultipleActiveResultSets=True")
                         sw.Close()
                     End If
                     If cmbAuthentication.SelectedIndex = 1 Then
-                        sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=WinFormsApp1_DB;User ID=" & txtUserName.Text.Trim & ";Password=" & txtPassword.Text & ";MultipleActiveResultSets=True")
+                        sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=DATA_PROCESSING;User ID=" & txtUserName.Text.Trim & ";Password=" & txtPassword.Text & ";MultipleActiveResultSets=True")
                         sw.Close()
                     End If
                     MetroMessageBox.Show(Me, "SQL Server setting has been saved successfully..." & vbCrLf & "Application will be closed,Please start it again", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -121,27 +121,27 @@ Public Class frmSqlServerSetting
         Try
             con = New SqlConnection("Data source=" & cmbServerName.Text & ";Initial Catalog=master;Integrated Security=True;MultipleActiveResultSets=True")
             con.Open()
-            Dim cb2 As String = "Select * from sysdatabases where name='WinFormsApp1_DB'"
+            Dim cb2 As String = "Select * from sysdatabases where name='DATA_PROCESSING'"
             cmd = New SqlCommand(cb2)
             cmd.Connection = con
             rdr = cmd.ExecuteReader()
             If rdr.Read() Then
                 con = New SqlConnection("Data source=" & cmbServerName.Text & ";Initial Catalog=master;Integrated Security=True;MultipleActiveResultSets=True")
                 con.Open()
-                Dim cb1 As String = "USE Master ALTER DATABASE WinFormsApp1_DB SET Single_User WITH Rollback Immediate DROP database WinFormsApp1_DB"
+                Dim cb1 As String = "USE Master ALTER DATABASE DATA_PROCESSING SET Single_User WITH Rollback Immediate DROP database DATA_PROCESSING"
                 cmd = New SqlCommand(cb1)
                 cmd.Connection = con
                 cmd.ExecuteNonQuery()
                 con.Close()
                 con = New SqlConnection("Data source=" & cmbServerName.Text & ";Initial Catalog=master;Integrated Security=True;MultipleActiveResultSets=True")
                 con.Open()
-                Dim cb As String = "Create Database WinFormsApp1_DB"
+                Dim cb As String = "Create Database DATA_PROCESSING"
                 cmd = New SqlCommand(cb)
                 cmd.Connection = con
                 cmd.ExecuteNonQuery()
                 con.Close()
                 'Using sr As StreamReader = New StreamReader(Application.StartupPath & "\DBScript.sql")
-                Using sr As StreamReader = New StreamReader(Application.StartupPath & "\WinFormsApp1.sql")
+                Using sr As StreamReader = New StreamReader(Application.StartupPath & "\DATA_PROCESSING.sql")
                     st = sr.ReadToEnd()
                     Dim server As New Server(New ServerConnection(con))
                     server.ConnectionContext.ExecuteNonQuery(st)
@@ -149,12 +149,12 @@ Public Class frmSqlServerSetting
             Else
                 con = New SqlConnection("Data source=" & cmbServerName.Text & ";Initial Catalog=master;Integrated Security=True;MultipleActiveResultSets=True")
                 con.Open()
-                Dim cb3 As String = "Create Database WinFormsApp1_DB"
+                Dim cb3 As String = "Create Database DATA_PROCESSING"
                 cmd = New SqlCommand(cb3)
                 cmd.Connection = con
                 cmd.ExecuteNonQuery()
                 con.Close()
-                Using sr As StreamReader = New StreamReader(Application.StartupPath & "\WinFormsApp1.sql")
+                Using sr As StreamReader = New StreamReader(Application.StartupPath & "\DATA_PROCESSING.sql")
                     st = sr.ReadToEnd()
                     Dim server As New Server(New ServerConnection(con))
                     server.ConnectionContext.ExecuteNonQuery(st)
@@ -169,11 +169,11 @@ Public Class frmSqlServerSetting
             Dim conString As String = "Data Source=" & cmbServerName.Text & ";Initial Catalog=master;Integrated Security=True;MultipleActiveResultSets=True"
             Using con As New SqlConnection(conString)
                 con.Open()
-                Dim cb2 As String = "SELECT * FROM sys.databases WHERE name='WinFormsApp1_DB'"
+                Dim cb2 As String = "SELECT * FROM sys.databases WHERE name='DATA_PROCESSING'"
                 Using cmd As New SqlCommand(cb2, con)
                     Using rdr As SqlDataReader = cmd.ExecuteReader()
                         If rdr.Read() Then
-                            Dim cb1 As String = "USE Master ALTER DATABASE WinFormsApp1_DB SET Single_User WITH Rollback Immediate DROP DATABASE WinFormsApp1_DB"
+                            Dim cb1 As String = "USE Master ALTER DATABASE DATA_PROCESSING SET Single_User WITH Rollback Immediate DROP DATABASE DATA_PROCESSING"
                             Using cmdDrop As New SqlCommand(cb1, con)
                                 cmdDrop.ExecuteNonQuery()
                             End Using
@@ -181,12 +181,12 @@ Public Class frmSqlServerSetting
                     End Using
                 End Using
 
-                Dim cb3 As String = "CREATE DATABASE WinFormsApp1_DB"
+                Dim cb3 As String = "CREATE DATABASE DATA_PROCESSING"
                 Using cmdCreateDB As New SqlCommand(cb3, con)
                     cmdCreateDB.ExecuteNonQuery()
                 End Using
 
-                Using sr As New StreamReader(Application.StartupPath & "\WinFormsApp1.sql")
+                Using sr As New StreamReader(Application.StartupPath & "\DATA_PROCESSING.sql")
                     Dim st As String = sr.ReadToEnd()
                     Dim server As New Microsoft.SqlServer.Management.Smo.Server(New Microsoft.SqlServer.Management.Common.ServerConnection(con))
                     server.ConnectionContext.ExecuteNonQuery(st)
@@ -197,54 +197,58 @@ Public Class frmSqlServerSetting
         End Try
     End Sub
     Sub CreateDB_new()
-        'Try
+        '  Try
         Dim conString As String = "Data Source=" & cmbServerName.Text & ";Initial Catalog=master;Integrated Security=True;MultipleActiveResultSets=True"
-        Using con As New SqlConnection(conString)
-            con.Open()
-            Dim cb2 As String = "SELECT * FROM sys.databases WHERE name='WinFormsApp1_DB'"
-            Using cmd As New SqlCommand(cb2, con)
-                Using rdr As SqlDataReader = cmd.ExecuteReader()
-                    If rdr.Read() Then
-                        Dim cb1 As String = "USE Master ALTER DATABASE WinFormsApp1_DB SET Single_User WITH Rollback Immediate"
-                        Using cmdDrop As New SqlCommand(cb1, con)
-                            cmdDrop.ExecuteNonQuery()
-                        End Using
 
-                        Dim cbDrop As String = "DROP DATABASE WinFormsApp1_DB"
-                        Using cmdDropDB As New SqlCommand(cbDrop, con)
-                            cmdDropDB.ExecuteNonQuery()
-                        End Using
-                    End If
+            Using con As New SqlConnection(conString)
+                con.Open()
+
+                ' Check if the database exists
+                Dim cb2 As String = "SELECT * FROM sys.databases WHERE name='DATA_PROCESSING'"
+                Using cmd As New SqlCommand(cb2, con)
+                    Using rdr As SqlDataReader = cmd.ExecuteReader()
+                        If rdr.Read() Then
+                            ' If the database exists, alter it to single user mode and drop it
+                            Dim cb1 As String = "ALTER DATABASE DATA_PROCESSING SET Single_User WITH Rollback Immediate"
+                            Using cmdDrop As New SqlCommand(cb1, con)
+                                cmdDrop.ExecuteNonQuery()
+                            End Using
+
+                            Dim cbDrop As String = "DROP DATABASE DATA_PROCESSING"
+                            Using cmdDropDB As New SqlCommand(cbDrop, con)
+                                cmdDropDB.ExecuteNonQuery()
+                            End Using
+                        End If
+                    End Using
+                End Using
+
+                ' Create the database
+                Dim cb3 As String = "CREATE DATABASE DATA_PROCESSING"
+                Using cmdCreateDB As New SqlCommand(cb3, con)
+                    cmdCreateDB.ExecuteNonQuery()
                 End Using
             End Using
-            Dim cb3 As String = "CREATE DATABASE WinFormsApp1_DB"
-            Using cmdCreateDB As New SqlCommand(cb3, con)
-                cmdCreateDB.ExecuteNonQuery()
-            End Using
 
-            ' Read SQL script from file and execute
-
-
-
-            '        Dim conString As String = "Data Source=" & cmbServerName.Text & ";Initial Catalog=master;Integrated Security=True;MultipleActiveResultSets=True"
-            ' Read SQL script from file and execute
-            Using sr As New StreamReader(Application.StartupPath & "\WinFormsApp1.sql")
+                ' Read SQL script from file and execute
+                Using sr As New StreamReader(Application.StartupPath & "\DATA_PROCESSING.sql")
                 Dim script As String = sr.ReadToEnd()
-                Dim commands As String() = script.Split({"GO"}, StringSplitOptions.RemoveEmptyEntries)
-                Using con1 As New SqlConnection(conString)
-                    con1.Open()
+                Dim commands As String() = script.Split(New String() {"GO"}, StringSplitOptions.RemoveEmptyEntries)
+
+                Using con As New SqlConnection(conString)
+                    con.Open()
                     For Each cmdText As String In commands
-                        Using cmdExecuteScript As New SqlCommand(cmdText, con1)
-                            cmdExecuteScript.ExecuteNonQuery()
-                        End Using
+                        If cmdText.Trim() <> "" Then
+                            Using cmdExecuteScript As New SqlCommand(cmdText, con)
+                                cmdExecuteScript.ExecuteNonQuery()
+                            End Using
+                        End If
                     Next
                 End Using
             End Using
-        End Using
 
-        'Catch ex As Exception
-        'MetroMessageBox.Show(Me, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        'End Try
+            ' Catch ex As Exception
+        '    MetroMessageBox.Show(Me, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '   End Try
     End Sub
 
     Private Sub cmbAuthentication_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cmbAuthentication.SelectedIndexChanged
@@ -348,11 +352,11 @@ Public Class frmSqlServerSetting
 
                         Using sw As StreamWriter = New StreamWriter(Application.StartupPath & "\SQLSettings.dat")
                             If cmbAuthentication.SelectedIndex = 0 Then
-                                sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=WinFormsApp1_DB;Integrated Security=True;MultipleActiveResultSets=True")
+                                sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=DATA_PROCESSING;Integrated Security=True;MultipleActiveResultSets=True")
                                 sw.Close()
                             End If
                             If cmbAuthentication.SelectedIndex = 1 Then
-                                sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=WinFormsApp1_DB;User ID=" & txtUserName.Text.Trim & ";Password=" & txtPassword.Text & ";MultipleActiveResultSets=True")
+                                sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=DATA_PROCESSING;User ID=" & txtUserName.Text.Trim & ";Password=" & txtPassword.Text & ";MultipleActiveResultSets=True")
                                 sw.Close()
                             End If
                             CreateBlankDB()
@@ -391,11 +395,11 @@ Public Class frmSqlServerSetting
 
                     Using sw As StreamWriter = New StreamWriter(Application.StartupPath & "\SQLSettings.dat")
                         If cmbAuthentication.SelectedIndex = 0 Then
-                            sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=WinFormsApp1_DB;Integrated Security=True;MultipleActiveResultSets=True")
+                            sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=DATA_PROCESSING;Integrated Security=True;MultipleActiveResultSets=True")
                             sw.Close()
                         End If
                         If cmbAuthentication.SelectedIndex = 1 Then
-                            sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=WinFormsApp1_DB;User ID=" & txtUserName.Text.Trim & ";Password=" & txtPassword.Text & ";MultipleActiveResultSets=True")
+                            sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=DATA_PROCESSING;User ID=" & txtUserName.Text.Trim & ";Password=" & txtPassword.Text & ";MultipleActiveResultSets=True")
                             sw.Close()
                         End If
                         MetroMessageBox.Show(Me, "SQL Server setting has been saved successfully..." & vbCrLf & "Application will be closed,Please start it again", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -411,26 +415,26 @@ Public Class frmSqlServerSetting
         Try
             con = New SqlConnection("Data source=" & cmbServerName.Text & ";Initial Catalog=master;Integrated Security=True;MultipleActiveResultSets=True")
             con.Open()
-            Dim cb2 As String = "Select * from sysdatabases where name='WinFormsApp1_DB'"
+            Dim cb2 As String = "Select * from sysdatabases where name='DATA_PROCESSING'"
             cmd = New SqlCommand(cb2)
             cmd.Connection = con
             rdr = cmd.ExecuteReader()
             If rdr.Read() Then
                 con = New SqlConnection("Data source=" & cmbServerName.Text & ";Initial Catalog=master;Integrated Security=True;MultipleActiveResultSets=True")
                 con.Open()
-                Dim cb1 As String = "USE Master ALTER DATABASE WinFormsApp1_DB SET Single_User WITH Rollback Immediate DROP database WinFormsApp1_DB"
+                Dim cb1 As String = "USE Master ALTER DATABASE DATA_PROCESSING SET Single_User WITH Rollback Immediate DROP database DATA_PROCESSING"
                 cmd = New SqlCommand(cb1)
                 cmd.Connection = con
                 cmd.ExecuteNonQuery()
                 con.Close()
                 con = New SqlConnection("Data source=" & cmbServerName.Text & ";Initial Catalog=master;Integrated Security=True;MultipleActiveResultSets=True")
                 con.Open()
-                Dim cb As String = "Create Database WinFormsApp1_DB"
+                Dim cb As String = "Create Database DATA_PROCESSING"
                 cmd = New SqlCommand(cb)
                 cmd.Connection = con
                 cmd.ExecuteNonQuery()
                 con.Close()
-                Using sr As StreamReader = New StreamReader(Application.StartupPath & "\WinFormsApp1.sql")
+                Using sr As StreamReader = New StreamReader(Application.StartupPath & "\DATA_PROCESSING.sql")
                     st = sr.ReadToEnd()
                     Dim server As New Server(New ServerConnection(con))
                     server.ConnectionContext.ExecuteNonQuery(st)
@@ -438,12 +442,12 @@ Public Class frmSqlServerSetting
             Else
                 con = New SqlConnection("Data source=" & cmbServerName.Text & ";Initial Catalog=master;Integrated Security=True;MultipleActiveResultSets=True")
                 con.Open()
-                Dim cb3 As String = "Create Database WinFormsApp1_DB"
+                Dim cb3 As String = "Create Database DATA_PROCESSING"
                 cmd = New SqlCommand(cb3)
                 cmd.Connection = con
                 cmd.ExecuteNonQuery()
                 con.Close()
-                Using sr As StreamReader = New StreamReader(Application.StartupPath & "\WinFormsApp1.sql")
+                Using sr As StreamReader = New StreamReader(Application.StartupPath & "\DATA_PROCESSING.sql")
                     st = sr.ReadToEnd()
                     Dim server As New Server(New ServerConnection(con))
                     server.ConnectionContext.ExecuteNonQuery(st)
@@ -451,6 +455,7 @@ Public Class frmSqlServerSetting
             End If
         Catch ex As Exception
             MetroMessageBox.Show(Me, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
         End Try
     End Sub
 
@@ -526,11 +531,11 @@ Public Class frmSqlServerSetting
         Deletefirsttimerunning()
         Using sw As StreamWriter = New StreamWriter(Application.StartupPath & "\SQLSettings.dat")
             If cmbAuthentication.SelectedIndex = 0 Then
-                sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=WinFormsApp1_DB;Integrated Security=True;MultipleActiveResultSets=True")
+                sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=DATA_PROCESSING;Integrated Security=True;MultipleActiveResultSets=True")
                 sw.Close()
             End If
             If cmbAuthentication.SelectedIndex = 1 Then
-                sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=WinFormsApp1_DB;User ID=" & txtUserName.Text.Trim & ";Password=" & txtPassword.Text & ";MultipleActiveResultSets=True")
+                sw.WriteLine("Data Source=" & cmbServerName.Text.Trim & ";Initial Catalog=DATA_PROCESSING;User ID=" & txtUserName.Text.Trim & ";Password=" & txtPassword.Text & ";MultipleActiveResultSets=True")
                 sw.Close()
             End If
 

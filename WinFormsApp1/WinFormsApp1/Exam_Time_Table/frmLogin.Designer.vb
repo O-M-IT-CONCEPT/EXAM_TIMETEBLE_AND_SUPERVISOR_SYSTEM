@@ -26,642 +26,647 @@ Partial Class frmLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
+        components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
-        Me.UserID = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.GelButton1 = New GelButtons.GelButton()
-        Me.Panel_Notify = New System.Windows.Forms.Panel()
-        Me.lblNotify = New System.Windows.Forms.Label()
-        Me.pic_notify = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnReconnect = New System.Windows.Forms.Button()
-        Me.cmbLoginType = New System.Windows.Forms.ComboBox()
-        Me.btnForgetPassword = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Password = New System.Windows.Forms.TextBox()
-        Me.btnCancel = New System.Windows.Forms.Button()
-        Me.lblTime = New System.Windows.Forms.Label()
-        Me.lblLicenseMessage = New System.Windows.Forms.Label()
-        Me.lblDate = New System.Windows.Forms.Label()
-        Me.UserType = New System.Windows.Forms.TextBox()
-        Me.txtCurrentClockInID = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Panel1.SuspendLayout()
-        Me.Panel_Notify.SuspendLayout()
-        CType(Me.pic_notify, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TableLayoutPanel3.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'UserID
-        '
-        Me.UserID.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UserID.ForeColor = System.Drawing.Color.DarkViolet
-        Me.UserID.Location = New System.Drawing.Point(267, 65)
-        Me.UserID.Name = "UserID"
-        Me.UserID.Size = New System.Drawing.Size(33, 35)
-        Me.UserID.TabIndex = 0
-        Me.UserID.Visible = False
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.LinkLabel1)
-        Me.Panel1.Controls.Add(Me.GelButton1)
-        Me.Panel1.Controls.Add(Me.Panel_Notify)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.btnReconnect)
-        Me.Panel1.Controls.Add(Me.cmbLoginType)
-        Me.Panel1.Controls.Add(Me.btnForgetPassword)
-        Me.Panel1.Controls.Add(Me.TableLayoutPanel3)
-        Me.Panel1.Controls.Add(Me.Password)
-        Me.Panel1.Controls.Add(Me.btnCancel)
-        Me.Panel1.Controls.Add(Me.lblTime)
-        Me.Panel1.Controls.Add(Me.lblLicenseMessage)
-        Me.Panel1.Controls.Add(Me.lblDate)
-        Me.Panel1.Controls.Add(Me.UserType)
-        Me.Panel1.Controls.Add(Me.txtCurrentClockInID)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Location = New System.Drawing.Point(1, 52)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(912, 497)
-        Me.Panel1.TabIndex = 2
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 58.0!, System.Drawing.FontStyle.Bold)
-        Me.Label5.ForeColor = System.Drawing.Color.Purple
-        Me.Label5.Location = New System.Drawing.Point(535, 316)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(327, 104)
-        Me.Label5.TabIndex = 402
-        Me.Label5.Text = "SYSTEM"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.LinkLabel1.Font = New System.Drawing.Font("Times New Roman", 9.0!)
-        Me.LinkLabel1.LinkColor = System.Drawing.Color.Purple
-        Me.LinkLabel1.Location = New System.Drawing.Point(479, 420)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(80, 15)
-        Me.LinkLabel1.TabIndex = 397
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "File Reindexing"
-        '
-        'GelButton1
-        '
-        Me.GelButton1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GelButton1.BackColor = System.Drawing.Color.White
-        Me.GelButton1.FlatAppearance.BorderSize = 0
-        Me.GelButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GelButton1.Font = New System.Drawing.Font("Segoe UI", 25.25!, System.Drawing.FontStyle.Bold)
-        Me.GelButton1.ForeColor = System.Drawing.Color.White
-        Me.GelButton1.GradientBottom = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.GelButton1.GradientTop = System.Drawing.Color.Purple
-        Me.GelButton1.Location = New System.Drawing.Point(316, 415)
-        Me.GelButton1.Name = "GelButton1"
-        Me.GelButton1.Size = New System.Drawing.Size(142, 64)
-        Me.GelButton1.TabIndex = 400
-        Me.GelButton1.Text = "Logout"
-        Me.GelButton1.UseVisualStyleBackColor = False
-        '
-        'Panel_Notify
-        '
-        Me.Panel_Notify.BackColor = System.Drawing.Color.Transparent
-        Me.Panel_Notify.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel_Notify.Controls.Add(Me.lblNotify)
-        Me.Panel_Notify.Controls.Add(Me.pic_notify)
-        Me.Panel_Notify.Location = New System.Drawing.Point(472, 3)
-        Me.Panel_Notify.Name = "Panel_Notify"
-        Me.Panel_Notify.Size = New System.Drawing.Size(440, 43)
-        Me.Panel_Notify.TabIndex = 398
-        Me.Panel_Notify.Visible = False
-        '
-        'lblNotify
-        '
-        Me.lblNotify.Font = New System.Drawing.Font("Segoe UI Semibold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNotify.Location = New System.Drawing.Point(41, 5)
-        Me.lblNotify.Name = "lblNotify"
-        Me.lblNotify.Size = New System.Drawing.Size(396, 36)
-        Me.lblNotify.TabIndex = 1
-        Me.lblNotify.Text = "License Status :"
-        Me.lblNotify.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'pic_notify
-        '
-        Me.pic_notify.Image = Global.WinFormsApp1.My.Resources.Resources.notify
-        Me.pic_notify.Location = New System.Drawing.Point(4, 5)
-        Me.pic_notify.Name = "pic_notify"
-        Me.pic_notify.Size = New System.Drawing.Size(31, 31)
-        Me.pic_notify.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pic_notify.TabIndex = 0
-        Me.pic_notify.TabStop = False
-        '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.5!)
-        Me.Label2.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label2.Location = New System.Drawing.Point(482, 49)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(430, 64)
-        Me.Label2.TabIndex = 399
-        Me.Label2.Text = "Contact your agent or email  moyofola12@gmail.com or" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "               website : at" &
-    "   infoconf.great-site.net " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.Label2.Visible = False
-        '
-        'btnReconnect
-        '
-        Me.btnReconnect.BackColor = System.Drawing.Color.Transparent
-        Me.btnReconnect.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnReconnect.FlatAppearance.BorderSize = 0
-        Me.btnReconnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnReconnect.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReconnect.ForeColor = System.Drawing.Color.White
-        Me.btnReconnect.Image = Global.WinFormsApp1.My.Resources.Resources.database_server
-        Me.btnReconnect.Location = New System.Drawing.Point(156, 415)
-        Me.btnReconnect.Name = "btnReconnect"
-        Me.btnReconnect.Size = New System.Drawing.Size(66, 61)
-        Me.btnReconnect.TabIndex = 394
-        Me.btnReconnect.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.ToolTip1.SetToolTip(Me.btnReconnect, "Check Database Connection Settings")
-        Me.btnReconnect.UseVisualStyleBackColor = False
-        '
-        'cmbLoginType
-        '
-        Me.cmbLoginType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbLoginType.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmbLoginType.FormattingEnabled = True
-        Me.cmbLoginType.Items.AddRange(New Object() {"PIN", "CARD"})
-        Me.cmbLoginType.Location = New System.Drawing.Point(26, 10)
-        Me.cmbLoginType.Name = "cmbLoginType"
-        Me.cmbLoginType.Size = New System.Drawing.Size(91, 45)
-        Me.cmbLoginType.TabIndex = 392
-        '
-        'btnForgetPassword
-        '
-        Me.btnForgetPassword.BackColor = System.Drawing.Color.Transparent
-        Me.btnForgetPassword.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnForgetPassword.FlatAppearance.BorderSize = 0
-        Me.btnForgetPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnForgetPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnForgetPassword.ForeColor = System.Drawing.Color.White
-        Me.btnForgetPassword.Image = CType(resources.GetObject("btnForgetPassword.Image"), System.Drawing.Image)
-        Me.btnForgetPassword.Location = New System.Drawing.Point(228, 417)
-        Me.btnForgetPassword.Name = "btnForgetPassword"
-        Me.btnForgetPassword.Size = New System.Drawing.Size(66, 61)
-        Me.btnForgetPassword.TabIndex = 386
-        Me.btnForgetPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnForgetPassword.UseVisualStyleBackColor = False
-        '
-        'TableLayoutPanel3
-        '
-        Me.TableLayoutPanel3.BackColor = System.Drawing.Color.Transparent
-        Me.TableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble
-        Me.TableLayoutPanel3.ColumnCount = 3
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
-        Me.TableLayoutPanel3.Controls.Add(Me.btnX, 0, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnTA9, 2, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnTA0, 1, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnTA8, 1, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnTA4, 0, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnScanCard, 2, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnTA6, 2, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnTA5, 1, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnTA7, 0, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnTA3, 2, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnTA1, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnTA2, 1, 0)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(11, 61)
-        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 4
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(453, 330)
-        Me.TableLayoutPanel3.TabIndex = 385
-        '
-        'btnX
-        '
-        Me.btnX.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnX.BackColor = System.Drawing.Color.White
-        Me.btnX.FlatAppearance.BorderSize = 0
-        Me.btnX.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnX.Font = New System.Drawing.Font("Segoe UI", 32.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnX.ForeColor = System.Drawing.Color.White
-        Me.btnX.GradientBottom = System.Drawing.SystemColors.InfoText
-        Me.btnX.GradientTop = System.Drawing.Color.Purple
-        Me.btnX.Location = New System.Drawing.Point(6, 249)
-        Me.btnX.Name = "btnX"
-        Me.btnX.Size = New System.Drawing.Size(140, 75)
-        Me.btnX.TabIndex = 9
-        Me.btnX.Text = "-->"
-        Me.btnX.UseVisualStyleBackColor = False
-        '
-        'btnTA9
-        '
-        Me.btnTA9.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnTA9.BackColor = System.Drawing.Color.White
-        Me.btnTA9.FlatAppearance.BorderSize = 0
-        Me.btnTA9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTA9.Font = New System.Drawing.Font("Segoe UI", 32.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTA9.ForeColor = System.Drawing.Color.White
-        Me.btnTA9.GradientBottom = System.Drawing.SystemColors.InfoText
-        Me.btnTA9.GradientTop = System.Drawing.Color.Purple
-        Me.btnTA9.Location = New System.Drawing.Point(305, 168)
-        Me.btnTA9.Name = "btnTA9"
-        Me.btnTA9.Size = New System.Drawing.Size(142, 72)
-        Me.btnTA9.TabIndex = 8
-        Me.btnTA9.Text = "9"
-        Me.btnTA9.UseVisualStyleBackColor = False
-        '
-        'btnTA0
-        '
-        Me.btnTA0.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnTA0.BackColor = System.Drawing.Color.White
-        Me.btnTA0.FlatAppearance.BorderSize = 0
-        Me.btnTA0.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTA0.Font = New System.Drawing.Font("Segoe UI", 32.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTA0.ForeColor = System.Drawing.Color.White
-        Me.btnTA0.GradientBottom = System.Drawing.SystemColors.InfoText
-        Me.btnTA0.GradientTop = System.Drawing.Color.Purple
-        Me.btnTA0.Location = New System.Drawing.Point(155, 249)
-        Me.btnTA0.Name = "btnTA0"
-        Me.btnTA0.Size = New System.Drawing.Size(141, 75)
-        Me.btnTA0.TabIndex = 10
-        Me.btnTA0.Text = "0"
-        Me.btnTA0.UseVisualStyleBackColor = False
-        '
-        'btnTA8
-        '
-        Me.btnTA8.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnTA8.BackColor = System.Drawing.Color.White
-        Me.btnTA8.FlatAppearance.BorderSize = 0
-        Me.btnTA8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTA8.Font = New System.Drawing.Font("Segoe UI", 32.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTA8.ForeColor = System.Drawing.Color.White
-        Me.btnTA8.GradientBottom = System.Drawing.SystemColors.InfoText
-        Me.btnTA8.GradientTop = System.Drawing.Color.Purple
-        Me.btnTA8.Location = New System.Drawing.Point(155, 168)
-        Me.btnTA8.Name = "btnTA8"
-        Me.btnTA8.Size = New System.Drawing.Size(141, 72)
-        Me.btnTA8.TabIndex = 7
-        Me.btnTA8.Text = "8"
-        Me.btnTA8.UseVisualStyleBackColor = False
-        '
-        'btnTA4
-        '
-        Me.btnTA4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnTA4.BackColor = System.Drawing.Color.White
-        Me.btnTA4.FlatAppearance.BorderSize = 0
-        Me.btnTA4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTA4.Font = New System.Drawing.Font("Segoe UI", 32.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTA4.ForeColor = System.Drawing.Color.White
-        Me.btnTA4.GradientBottom = System.Drawing.SystemColors.InfoText
-        Me.btnTA4.GradientTop = System.Drawing.Color.Purple
-        Me.btnTA4.Location = New System.Drawing.Point(6, 87)
-        Me.btnTA4.Name = "btnTA4"
-        Me.btnTA4.Size = New System.Drawing.Size(140, 72)
-        Me.btnTA4.TabIndex = 3
-        Me.btnTA4.Text = "4"
-        Me.btnTA4.UseVisualStyleBackColor = False
-        '
-        'btnScanCard
-        '
-        Me.btnScanCard.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnScanCard.BackColor = System.Drawing.Color.Transparent
-        Me.btnScanCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnScanCard.FlatAppearance.BorderSize = 0
-        Me.btnScanCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnScanCard.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnScanCard.ForeColor = System.Drawing.Color.White
-        Me.btnScanCard.GradientBottom = System.Drawing.Color.Red
-        Me.btnScanCard.GradientTop = System.Drawing.Color.Maroon
-        Me.btnScanCard.Location = New System.Drawing.Point(305, 249)
-        Me.btnScanCard.Name = "btnScanCard"
-        Me.btnScanCard.Size = New System.Drawing.Size(142, 75)
-        Me.btnScanCard.TabIndex = 11
-        Me.btnScanCard.Text = "SCAN CARD"
-        Me.btnScanCard.UseVisualStyleBackColor = False
-        '
-        'btnTA6
-        '
-        Me.btnTA6.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnTA6.BackColor = System.Drawing.Color.White
-        Me.btnTA6.FlatAppearance.BorderSize = 0
-        Me.btnTA6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTA6.Font = New System.Drawing.Font("Segoe UI", 32.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTA6.ForeColor = System.Drawing.Color.White
-        Me.btnTA6.GradientBottom = System.Drawing.SystemColors.InfoText
-        Me.btnTA6.GradientTop = System.Drawing.Color.Purple
-        Me.btnTA6.Location = New System.Drawing.Point(305, 87)
-        Me.btnTA6.Name = "btnTA6"
-        Me.btnTA6.Size = New System.Drawing.Size(142, 72)
-        Me.btnTA6.TabIndex = 5
-        Me.btnTA6.Text = "6"
-        Me.btnTA6.UseVisualStyleBackColor = False
-        '
-        'btnTA5
-        '
-        Me.btnTA5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnTA5.BackColor = System.Drawing.Color.White
-        Me.btnTA5.FlatAppearance.BorderSize = 0
-        Me.btnTA5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTA5.Font = New System.Drawing.Font("Segoe UI", 32.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTA5.ForeColor = System.Drawing.Color.White
-        Me.btnTA5.GradientBottom = System.Drawing.SystemColors.InfoText
-        Me.btnTA5.GradientTop = System.Drawing.Color.Purple
-        Me.btnTA5.Location = New System.Drawing.Point(155, 87)
-        Me.btnTA5.Name = "btnTA5"
-        Me.btnTA5.Size = New System.Drawing.Size(141, 72)
-        Me.btnTA5.TabIndex = 4
-        Me.btnTA5.Text = "5"
-        Me.btnTA5.UseVisualStyleBackColor = False
-        '
-        'btnTA7
-        '
-        Me.btnTA7.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnTA7.BackColor = System.Drawing.Color.White
-        Me.btnTA7.FlatAppearance.BorderSize = 0
-        Me.btnTA7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTA7.Font = New System.Drawing.Font("Segoe UI", 32.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTA7.ForeColor = System.Drawing.Color.White
-        Me.btnTA7.GradientBottom = System.Drawing.SystemColors.InfoText
-        Me.btnTA7.GradientTop = System.Drawing.Color.Purple
-        Me.btnTA7.Location = New System.Drawing.Point(6, 168)
-        Me.btnTA7.Name = "btnTA7"
-        Me.btnTA7.Size = New System.Drawing.Size(140, 72)
-        Me.btnTA7.TabIndex = 6
-        Me.btnTA7.Text = "7"
-        Me.btnTA7.UseVisualStyleBackColor = False
-        '
-        'btnTA3
-        '
-        Me.btnTA3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnTA3.BackColor = System.Drawing.Color.White
-        Me.btnTA3.FlatAppearance.BorderSize = 0
-        Me.btnTA3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTA3.Font = New System.Drawing.Font("Segoe UI", 32.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTA3.ForeColor = System.Drawing.Color.White
-        Me.btnTA3.GradientBottom = System.Drawing.SystemColors.InfoText
-        Me.btnTA3.GradientTop = System.Drawing.Color.Purple
-        Me.btnTA3.Location = New System.Drawing.Point(305, 6)
-        Me.btnTA3.Name = "btnTA3"
-        Me.btnTA3.Size = New System.Drawing.Size(142, 72)
-        Me.btnTA3.TabIndex = 2
-        Me.btnTA3.Text = "3"
-        Me.btnTA3.UseVisualStyleBackColor = False
-        '
-        'btnTA1
-        '
-        Me.btnTA1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnTA1.BackColor = System.Drawing.Color.White
-        Me.btnTA1.FlatAppearance.BorderSize = 0
-        Me.btnTA1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTA1.Font = New System.Drawing.Font("Segoe UI", 32.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTA1.ForeColor = System.Drawing.Color.White
-        Me.btnTA1.GradientBottom = System.Drawing.SystemColors.InfoText
-        Me.btnTA1.GradientTop = System.Drawing.Color.Purple
-        Me.btnTA1.Location = New System.Drawing.Point(6, 6)
-        Me.btnTA1.Name = "btnTA1"
-        Me.btnTA1.Size = New System.Drawing.Size(140, 72)
-        Me.btnTA1.TabIndex = 0
-        Me.btnTA1.Text = "1"
-        Me.btnTA1.UseVisualStyleBackColor = False
-        '
-        'btnTA2
-        '
-        Me.btnTA2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnTA2.BackColor = System.Drawing.Color.White
-        Me.btnTA2.FlatAppearance.BorderSize = 0
-        Me.btnTA2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnTA2.Font = New System.Drawing.Font("Segoe UI", 32.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTA2.ForeColor = System.Drawing.Color.White
-        Me.btnTA2.GradientBottom = System.Drawing.SystemColors.InfoText
-        Me.btnTA2.GradientTop = System.Drawing.Color.Purple
-        Me.btnTA2.Location = New System.Drawing.Point(155, 6)
-        Me.btnTA2.Name = "btnTA2"
-        Me.btnTA2.Size = New System.Drawing.Size(141, 72)
-        Me.btnTA2.TabIndex = 1
-        Me.btnTA2.Text = "2"
-        Me.btnTA2.UseVisualStyleBackColor = False
-        '
-        'Password
-        '
-        Me.Password.BackColor = System.Drawing.Color.White
-        Me.Password.Font = New System.Drawing.Font("Segoe UI Semibold", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Password.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.Password.Location = New System.Drawing.Point(134, 6)
-        Me.Password.Name = "Password"
-        Me.Password.Size = New System.Drawing.Size(326, 50)
-        Me.Password.TabIndex = 0
-        Me.Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'btnCancel
-        '
-        Me.btnCancel.BackColor = System.Drawing.Color.Transparent
-        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.FlatAppearance.BorderSize = 0
-        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.ForeColor = System.Drawing.Color.White
-        Me.btnCancel.Image = CType(resources.GetObject("btnCancel.Image"), System.Drawing.Image)
-        Me.btnCancel.Location = New System.Drawing.Point(84, 415)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(66, 61)
-        Me.btnCancel.TabIndex = 0
-        Me.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnCancel.UseVisualStyleBackColor = False
-        '
-        'lblTime
-        '
-        Me.lblTime.BackColor = System.Drawing.Color.Transparent
-        Me.lblTime.Font = New System.Drawing.Font("Segoe UI", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTime.ForeColor = System.Drawing.Color.Purple
-        Me.lblTime.Location = New System.Drawing.Point(11, 277)
-        Me.lblTime.Name = "lblTime"
-        Me.lblTime.Size = New System.Drawing.Size(437, 86)
-        Me.lblTime.TabIndex = 389
-        Me.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblLicenseMessage
-        '
-        Me.lblLicenseMessage.BackColor = System.Drawing.Color.Transparent
-        Me.lblLicenseMessage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblLicenseMessage.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.lblLicenseMessage.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.lblLicenseMessage.Location = New System.Drawing.Point(482, 436)
-        Me.lblLicenseMessage.Name = "lblLicenseMessage"
-        Me.lblLicenseMessage.Size = New System.Drawing.Size(430, 35)
-        Me.lblLicenseMessage.TabIndex = 393
-        Me.lblLicenseMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblDate
-        '
-        Me.lblDate.BackColor = System.Drawing.Color.Transparent
-        Me.lblDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblDate.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDate.ForeColor = System.Drawing.Color.Purple
-        Me.lblDate.Location = New System.Drawing.Point(482, 435)
-        Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(428, 37)
-        Me.lblDate.TabIndex = 388
-        Me.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.lblDate.Visible = False
-        '
-        'UserType
-        '
-        Me.UserType.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UserType.ForeColor = System.Drawing.Color.DarkViolet
-        Me.UserType.Location = New System.Drawing.Point(318, 150)
-        Me.UserType.Name = "UserType"
-        Me.UserType.Size = New System.Drawing.Size(33, 35)
-        Me.UserType.TabIndex = 16
-        Me.UserType.Visible = False
-        '
-        'txtCurrentClockInID
-        '
-        Me.txtCurrentClockInID.Location = New System.Drawing.Point(11, 162)
-        Me.txtCurrentClockInID.Name = "txtCurrentClockInID"
-        Me.txtCurrentClockInID.Size = New System.Drawing.Size(100, 20)
-        Me.txtCurrentClockInID.TabIndex = 25
-        Me.txtCurrentClockInID.Visible = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 95.0!, System.Drawing.FontStyle.Bold)
-        Me.Label3.ForeColor = System.Drawing.Color.Purple
-        Me.Label3.Location = New System.Drawing.Point(479, 80)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(453, 168)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "EXAM "
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 54.0!, System.Drawing.FontStyle.Bold)
-        Me.Label4.ForeColor = System.Drawing.Color.Purple
-        Me.Label4.Location = New System.Drawing.Point(452, 229)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(489, 96)
-        Me.Label4.TabIndex = 401
-        Me.Label4.Text = "SUPERVISON "
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'Panel2
-        '
-        Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.BackColor = System.Drawing.Color.Purple
-        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Location = New System.Drawing.Point(1, 3)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(922, 46)
-        Me.Panel2.TabIndex = 17
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(3, 5)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(919, 37)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "EXAM TIME TABLE SUPERVISION SYSTEM"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Timer2
-        '
-        Me.Timer2.Enabled = True
-        '
-        'ToolTip1
-        '
-        Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
-        Me.ToolTip1.ToolTipTitle = "Database"
-        '
-        'frmLogin
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(925, 561)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.UserID)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Name = "frmLogin"
-        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Login Form"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.Panel_Notify.ResumeLayout(False)
-        CType(Me.pic_notify, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TableLayoutPanel3.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        UserID = New TextBox()
+        Panel1 = New Panel()
+        Label5 = New Label()
+        Label2 = New Label()
+        Label3 = New Label()
+        Label4 = New Label()
+        LinkLabel1 = New LinkLabel()
+        GelButton1 = New GelButtons.GelButton()
+        Panel_Notify = New Panel()
+        lblNotify = New Label()
+        pic_notify = New PictureBox()
+        btnReconnect = New Button()
+        cmbLoginType = New ComboBox()
+        btnForgetPassword = New Button()
+        TableLayoutPanel3 = New TableLayoutPanel()
+        btnX = New GelButtons.GelButton()
+        btnTA9 = New GelButtons.GelButton()
+        btnTA0 = New GelButtons.GelButton()
+        btnTA8 = New GelButtons.GelButton()
+        btnTA4 = New GelButtons.GelButton()
+        btnScanCard = New GelButtons.GelButton()
+        btnTA6 = New GelButtons.GelButton()
+        btnTA5 = New GelButtons.GelButton()
+        btnTA7 = New GelButtons.GelButton()
+        btnTA3 = New GelButtons.GelButton()
+        btnTA1 = New GelButtons.GelButton()
+        btnTA2 = New GelButtons.GelButton()
+        Password = New TextBox()
+        btnCancel = New Button()
+        lblTime = New Label()
+        lblLicenseMessage = New Label()
+        lblDate = New Label()
+        UserType = New TextBox()
+        txtCurrentClockInID = New TextBox()
+        Timer2 = New Timer(components)
+        ToolTip1 = New ToolTip(components)
+        Label1 = New Label()
+        Panel1.SuspendLayout()
+        Panel_Notify.SuspendLayout()
+        CType(pic_notify, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel3.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' UserID
+        ' 
+        UserID.Font = New Font("Microsoft Sans Serif", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        UserID.ForeColor = Color.DarkViolet
+        UserID.Location = New Point(312, 75)
+        UserID.Margin = New Padding(4, 3, 4, 3)
+        UserID.Name = "UserID"
+        UserID.Size = New Size(38, 35)
+        UserID.TabIndex = 0
+        UserID.Visible = False
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = Color.White
+        Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), Image)
+        Panel1.BackgroundImageLayout = ImageLayout.Stretch
+        Panel1.Controls.Add(Label5)
+        Panel1.Controls.Add(Label2)
+        Panel1.Controls.Add(Label3)
+        Panel1.Controls.Add(Label4)
+        Panel1.Controls.Add(LinkLabel1)
+        Panel1.Controls.Add(GelButton1)
+        Panel1.Controls.Add(Panel_Notify)
+        Panel1.Controls.Add(btnReconnect)
+        Panel1.Controls.Add(cmbLoginType)
+        Panel1.Controls.Add(btnForgetPassword)
+        Panel1.Controls.Add(TableLayoutPanel3)
+        Panel1.Controls.Add(Password)
+        Panel1.Controls.Add(btnCancel)
+        Panel1.Controls.Add(lblTime)
+        Panel1.Controls.Add(lblLicenseMessage)
+        Panel1.Controls.Add(lblDate)
+        Panel1.Controls.Add(UserType)
+        Panel1.Controls.Add(txtCurrentClockInID)
+        Panel1.Location = New Point(6, 51)
+        Panel1.Margin = New Padding(4, 3, 4, 3)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(1064, 573)
+        Panel1.TabIndex = 2
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.BackColor = Color.Transparent
+        Label5.Font = New Font("Segoe UI Semibold", 58.0F, FontStyle.Bold)
+        Label5.ForeColor = Color.Purple
+        Label5.Location = New Point(623, 378)
+        Label5.Margin = New Padding(4, 0, 4, 0)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(327, 104)
+        Label5.TabIndex = 407
+        Label5.Text = "SYSTEM"
+        Label5.TextAlign = ContentAlignment.TopCenter
+        ' 
+        ' Label2
+        ' 
+        Label2.BackColor = Color.Transparent
+        Label2.Font = New Font("Segoe UI", 9.5F)
+        Label2.ForeColor = SystemColors.HotTrack
+        Label2.Location = New Point(561, 70)
+        Label2.Margin = New Padding(4, 0, 4, 0)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(502, 74)
+        Label2.TabIndex = 405
+        Label2.Text = "Contact your agent or email  moyofola12@gmail.com or" & vbCrLf & "               website : at   infoconf.great-site.net " & vbCrLf
+        Label2.TextAlign = ContentAlignment.MiddleCenter
+        Label2.Visible = False
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.BackColor = Color.Transparent
+        Label3.Font = New Font("Segoe UI Semibold", 95.0F, FontStyle.Bold)
+        Label3.ForeColor = Color.Purple
+        Label3.Location = New Point(558, 105)
+        Label3.Margin = New Padding(4, 0, 4, 0)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(453, 168)
+        Label3.TabIndex = 404
+        Label3.Text = "EXAM "
+        Label3.TextAlign = ContentAlignment.TopCenter
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.BackColor = Color.Transparent
+        Label4.Font = New Font("Segoe UI Semibold", 54.0F, FontStyle.Bold)
+        Label4.ForeColor = Color.Purple
+        Label4.Location = New Point(558, 273)
+        Label4.Margin = New Padding(4, 0, 4, 0)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(489, 96)
+        Label4.TabIndex = 406
+        Label4.Text = "SUPERVISON "
+        Label4.TextAlign = ContentAlignment.TopCenter
+        ' 
+        ' LinkLabel1
+        ' 
+        LinkLabel1.AutoSize = True
+        LinkLabel1.BackColor = Color.Transparent
+        LinkLabel1.Font = New Font("Times New Roman", 9.0F)
+        LinkLabel1.LinkColor = Color.Purple
+        LinkLabel1.Location = New Point(559, 485)
+        LinkLabel1.Margin = New Padding(4, 0, 4, 0)
+        LinkLabel1.Name = "LinkLabel1"
+        LinkLabel1.Size = New Size(80, 15)
+        LinkLabel1.TabIndex = 397
+        LinkLabel1.TabStop = True
+        LinkLabel1.Text = "File Reindexing"
+        ' 
+        ' GelButton1
+        ' 
+        GelButton1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        GelButton1.BackColor = Color.White
+        GelButton1.FlatAppearance.BorderSize = 0
+        GelButton1.FlatStyle = FlatStyle.Flat
+        GelButton1.Font = New Font("Segoe UI", 25.25F, FontStyle.Bold)
+        GelButton1.ForeColor = Color.White
+        GelButton1.GradientBottom = Color.FromArgb(CByte(192), CByte(0), CByte(192))
+        GelButton1.GradientTop = Color.Purple
+        GelButton1.Location = New Point(369, 479)
+        GelButton1.Margin = New Padding(4, 3, 4, 3)
+        GelButton1.Name = "GelButton1"
+        GelButton1.Size = New Size(166, 74)
+        GelButton1.TabIndex = 400
+        GelButton1.Text = "Logout"
+        GelButton1.UseVisualStyleBackColor = False
+        ' 
+        ' Panel_Notify
+        ' 
+        Panel_Notify.BackColor = Color.Transparent
+        Panel_Notify.BorderStyle = BorderStyle.FixedSingle
+        Panel_Notify.Controls.Add(lblNotify)
+        Panel_Notify.Controls.Add(pic_notify)
+        Panel_Notify.Location = New Point(551, 3)
+        Panel_Notify.Margin = New Padding(4, 3, 4, 3)
+        Panel_Notify.Name = "Panel_Notify"
+        Panel_Notify.Size = New Size(513, 49)
+        Panel_Notify.TabIndex = 398
+        Panel_Notify.Visible = False
+        ' 
+        ' lblNotify
+        ' 
+        lblNotify.Font = New Font("Segoe UI Semibold", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblNotify.Location = New Point(48, 6)
+        lblNotify.Margin = New Padding(4, 0, 4, 0)
+        lblNotify.Name = "lblNotify"
+        lblNotify.Size = New Size(462, 42)
+        lblNotify.TabIndex = 1
+        lblNotify.Text = "License Status :"
+        lblNotify.TextAlign = ContentAlignment.TopCenter
+        ' 
+        ' pic_notify
+        ' 
+        pic_notify.Image = My.Resources.Resources.notify
+        pic_notify.Location = New Point(5, 6)
+        pic_notify.Margin = New Padding(4, 3, 4, 3)
+        pic_notify.Name = "pic_notify"
+        pic_notify.Size = New Size(36, 36)
+        pic_notify.SizeMode = PictureBoxSizeMode.StretchImage
+        pic_notify.TabIndex = 0
+        pic_notify.TabStop = False
+        ' 
+        ' btnReconnect
+        ' 
+        btnReconnect.BackColor = Color.Transparent
+        btnReconnect.DialogResult = DialogResult.Cancel
+        btnReconnect.FlatAppearance.BorderSize = 0
+        btnReconnect.FlatStyle = FlatStyle.Flat
+        btnReconnect.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnReconnect.ForeColor = Color.White
+        btnReconnect.Image = My.Resources.Resources.database_server
+        btnReconnect.Location = New Point(182, 479)
+        btnReconnect.Margin = New Padding(4, 3, 4, 3)
+        btnReconnect.Name = "btnReconnect"
+        btnReconnect.Size = New Size(77, 70)
+        btnReconnect.TabIndex = 394
+        btnReconnect.TextAlign = ContentAlignment.MiddleRight
+        ToolTip1.SetToolTip(btnReconnect, "Check Database Connection Settings")
+        btnReconnect.UseVisualStyleBackColor = False
+        ' 
+        ' cmbLoginType
+        ' 
+        cmbLoginType.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbLoginType.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        cmbLoginType.FormattingEnabled = True
+        cmbLoginType.Items.AddRange(New Object() {"PIN", "CARD"})
+        cmbLoginType.Location = New Point(20, 5)
+        cmbLoginType.Margin = New Padding(4, 3, 4, 3)
+        cmbLoginType.Name = "cmbLoginType"
+        cmbLoginType.Size = New Size(133, 45)
+        cmbLoginType.TabIndex = 392
+        ' 
+        ' btnForgetPassword
+        ' 
+        btnForgetPassword.BackColor = Color.Transparent
+        btnForgetPassword.DialogResult = DialogResult.Cancel
+        btnForgetPassword.FlatAppearance.BorderSize = 0
+        btnForgetPassword.FlatStyle = FlatStyle.Flat
+        btnForgetPassword.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnForgetPassword.ForeColor = Color.White
+        btnForgetPassword.Image = CType(resources.GetObject("btnForgetPassword.Image"), Image)
+        btnForgetPassword.Location = New Point(266, 481)
+        btnForgetPassword.Margin = New Padding(4, 3, 4, 3)
+        btnForgetPassword.Name = "btnForgetPassword"
+        btnForgetPassword.Size = New Size(77, 70)
+        btnForgetPassword.TabIndex = 386
+        btnForgetPassword.TextAlign = ContentAlignment.MiddleRight
+        btnForgetPassword.UseVisualStyleBackColor = False
+        ' 
+        ' TableLayoutPanel3
+        ' 
+        TableLayoutPanel3.BackColor = Color.Transparent
+        TableLayoutPanel3.CellBorderStyle = TableLayoutPanelCellBorderStyle.InsetDouble
+        TableLayoutPanel3.ColumnCount = 3
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.33333F))
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.33334F))
+        TableLayoutPanel3.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 33.33334F))
+        TableLayoutPanel3.Controls.Add(btnX, 0, 3)
+        TableLayoutPanel3.Controls.Add(btnTA9, 2, 2)
+        TableLayoutPanel3.Controls.Add(btnTA0, 1, 3)
+        TableLayoutPanel3.Controls.Add(btnTA8, 1, 2)
+        TableLayoutPanel3.Controls.Add(btnTA4, 0, 1)
+        TableLayoutPanel3.Controls.Add(btnScanCard, 2, 3)
+        TableLayoutPanel3.Controls.Add(btnTA6, 2, 1)
+        TableLayoutPanel3.Controls.Add(btnTA5, 1, 1)
+        TableLayoutPanel3.Controls.Add(btnTA7, 0, 2)
+        TableLayoutPanel3.Controls.Add(btnTA3, 2, 0)
+        TableLayoutPanel3.Controls.Add(btnTA1, 0, 0)
+        TableLayoutPanel3.Controls.Add(btnTA2, 1, 0)
+        TableLayoutPanel3.Location = New Point(13, 70)
+        TableLayoutPanel3.Margin = New Padding(4, 3, 4, 3)
+        TableLayoutPanel3.Name = "TableLayoutPanel3"
+        TableLayoutPanel3.RowCount = 4
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel3.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel3.Size = New Size(528, 381)
+        TableLayoutPanel3.TabIndex = 385
+        ' 
+        ' btnX
+        ' 
+        btnX.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnX.BackColor = Color.White
+        btnX.FlatAppearance.BorderSize = 0
+        btnX.FlatStyle = FlatStyle.Flat
+        btnX.Font = New Font("Segoe UI", 32.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnX.ForeColor = Color.White
+        btnX.GradientBottom = SystemColors.InfoText
+        btnX.GradientTop = Color.Purple
+        btnX.Location = New Point(7, 288)
+        btnX.Margin = New Padding(4, 3, 4, 3)
+        btnX.Name = "btnX"
+        btnX.Size = New Size(163, 87)
+        btnX.TabIndex = 9
+        btnX.Text = "-->"
+        btnX.UseVisualStyleBackColor = False
+        ' 
+        ' btnTA9
+        ' 
+        btnTA9.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnTA9.BackColor = Color.White
+        btnTA9.FlatAppearance.BorderSize = 0
+        btnTA9.FlatStyle = FlatStyle.Flat
+        btnTA9.Font = New Font("Segoe UI", 32.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnTA9.ForeColor = Color.White
+        btnTA9.GradientBottom = SystemColors.InfoText
+        btnTA9.GradientTop = Color.Purple
+        btnTA9.Location = New Point(356, 194)
+        btnTA9.Margin = New Padding(4, 3, 4, 3)
+        btnTA9.Name = "btnTA9"
+        btnTA9.Size = New Size(165, 85)
+        btnTA9.TabIndex = 8
+        btnTA9.Text = "9"
+        btnTA9.UseVisualStyleBackColor = False
+        ' 
+        ' btnTA0
+        ' 
+        btnTA0.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnTA0.BackColor = Color.White
+        btnTA0.FlatAppearance.BorderSize = 0
+        btnTA0.FlatStyle = FlatStyle.Flat
+        btnTA0.Font = New Font("Segoe UI", 32.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnTA0.ForeColor = Color.White
+        btnTA0.GradientBottom = SystemColors.InfoText
+        btnTA0.GradientTop = Color.Purple
+        btnTA0.Location = New Point(181, 288)
+        btnTA0.Margin = New Padding(4, 3, 4, 3)
+        btnTA0.Name = "btnTA0"
+        btnTA0.Size = New Size(164, 87)
+        btnTA0.TabIndex = 10
+        btnTA0.Text = "0"
+        btnTA0.UseVisualStyleBackColor = False
+        ' 
+        ' btnTA8
+        ' 
+        btnTA8.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnTA8.BackColor = Color.White
+        btnTA8.FlatAppearance.BorderSize = 0
+        btnTA8.FlatStyle = FlatStyle.Flat
+        btnTA8.Font = New Font("Segoe UI", 32.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnTA8.ForeColor = Color.White
+        btnTA8.GradientBottom = SystemColors.InfoText
+        btnTA8.GradientTop = Color.Purple
+        btnTA8.Location = New Point(181, 194)
+        btnTA8.Margin = New Padding(4, 3, 4, 3)
+        btnTA8.Name = "btnTA8"
+        btnTA8.Size = New Size(164, 85)
+        btnTA8.TabIndex = 7
+        btnTA8.Text = "8"
+        btnTA8.UseVisualStyleBackColor = False
+        ' 
+        ' btnTA4
+        ' 
+        btnTA4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnTA4.BackColor = Color.White
+        btnTA4.FlatAppearance.BorderSize = 0
+        btnTA4.FlatStyle = FlatStyle.Flat
+        btnTA4.Font = New Font("Segoe UI", 32.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnTA4.ForeColor = Color.White
+        btnTA4.GradientBottom = SystemColors.InfoText
+        btnTA4.GradientTop = Color.Purple
+        btnTA4.Location = New Point(7, 100)
+        btnTA4.Margin = New Padding(4, 3, 4, 3)
+        btnTA4.Name = "btnTA4"
+        btnTA4.Size = New Size(163, 85)
+        btnTA4.TabIndex = 3
+        btnTA4.Text = "4"
+        btnTA4.UseVisualStyleBackColor = False
+        ' 
+        ' btnScanCard
+        ' 
+        btnScanCard.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnScanCard.BackColor = Color.Transparent
+        btnScanCard.BackgroundImageLayout = ImageLayout.Stretch
+        btnScanCard.FlatAppearance.BorderSize = 0
+        btnScanCard.FlatStyle = FlatStyle.Flat
+        btnScanCard.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnScanCard.ForeColor = Color.White
+        btnScanCard.GradientBottom = Color.Red
+        btnScanCard.GradientTop = Color.Maroon
+        btnScanCard.Location = New Point(356, 288)
+        btnScanCard.Margin = New Padding(4, 3, 4, 3)
+        btnScanCard.Name = "btnScanCard"
+        btnScanCard.Size = New Size(165, 87)
+        btnScanCard.TabIndex = 11
+        btnScanCard.Text = "SCAN CARD"
+        btnScanCard.UseVisualStyleBackColor = False
+        ' 
+        ' btnTA6
+        ' 
+        btnTA6.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnTA6.BackColor = Color.White
+        btnTA6.FlatAppearance.BorderSize = 0
+        btnTA6.FlatStyle = FlatStyle.Flat
+        btnTA6.Font = New Font("Segoe UI", 32.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnTA6.ForeColor = Color.White
+        btnTA6.GradientBottom = SystemColors.InfoText
+        btnTA6.GradientTop = Color.Purple
+        btnTA6.Location = New Point(356, 100)
+        btnTA6.Margin = New Padding(4, 3, 4, 3)
+        btnTA6.Name = "btnTA6"
+        btnTA6.Size = New Size(165, 85)
+        btnTA6.TabIndex = 5
+        btnTA6.Text = "6"
+        btnTA6.UseVisualStyleBackColor = False
+        ' 
+        ' btnTA5
+        ' 
+        btnTA5.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnTA5.BackColor = Color.White
+        btnTA5.FlatAppearance.BorderSize = 0
+        btnTA5.FlatStyle = FlatStyle.Flat
+        btnTA5.Font = New Font("Segoe UI", 32.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnTA5.ForeColor = Color.White
+        btnTA5.GradientBottom = SystemColors.InfoText
+        btnTA5.GradientTop = Color.Purple
+        btnTA5.Location = New Point(181, 100)
+        btnTA5.Margin = New Padding(4, 3, 4, 3)
+        btnTA5.Name = "btnTA5"
+        btnTA5.Size = New Size(164, 85)
+        btnTA5.TabIndex = 4
+        btnTA5.Text = "5"
+        btnTA5.UseVisualStyleBackColor = False
+        ' 
+        ' btnTA7
+        ' 
+        btnTA7.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnTA7.BackColor = Color.White
+        btnTA7.FlatAppearance.BorderSize = 0
+        btnTA7.FlatStyle = FlatStyle.Flat
+        btnTA7.Font = New Font("Segoe UI", 32.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnTA7.ForeColor = Color.White
+        btnTA7.GradientBottom = SystemColors.InfoText
+        btnTA7.GradientTop = Color.Purple
+        btnTA7.Location = New Point(7, 194)
+        btnTA7.Margin = New Padding(4, 3, 4, 3)
+        btnTA7.Name = "btnTA7"
+        btnTA7.Size = New Size(163, 85)
+        btnTA7.TabIndex = 6
+        btnTA7.Text = "7"
+        btnTA7.UseVisualStyleBackColor = False
+        ' 
+        ' btnTA3
+        ' 
+        btnTA3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnTA3.BackColor = Color.White
+        btnTA3.FlatAppearance.BorderSize = 0
+        btnTA3.FlatStyle = FlatStyle.Flat
+        btnTA3.Font = New Font("Segoe UI", 32.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnTA3.ForeColor = Color.White
+        btnTA3.GradientBottom = SystemColors.InfoText
+        btnTA3.GradientTop = Color.Purple
+        btnTA3.Location = New Point(356, 6)
+        btnTA3.Margin = New Padding(4, 3, 4, 3)
+        btnTA3.Name = "btnTA3"
+        btnTA3.Size = New Size(165, 85)
+        btnTA3.TabIndex = 2
+        btnTA3.Text = "3"
+        btnTA3.UseVisualStyleBackColor = False
+        ' 
+        ' btnTA1
+        ' 
+        btnTA1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnTA1.BackColor = Color.White
+        btnTA1.FlatAppearance.BorderSize = 0
+        btnTA1.FlatStyle = FlatStyle.Flat
+        btnTA1.Font = New Font("Segoe UI", 32.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnTA1.ForeColor = Color.White
+        btnTA1.GradientBottom = SystemColors.InfoText
+        btnTA1.GradientTop = Color.Purple
+        btnTA1.Location = New Point(7, 6)
+        btnTA1.Margin = New Padding(4, 3, 4, 3)
+        btnTA1.Name = "btnTA1"
+        btnTA1.Size = New Size(163, 85)
+        btnTA1.TabIndex = 0
+        btnTA1.Text = "1"
+        btnTA1.UseVisualStyleBackColor = False
+        ' 
+        ' btnTA2
+        ' 
+        btnTA2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        btnTA2.BackColor = Color.White
+        btnTA2.FlatAppearance.BorderSize = 0
+        btnTA2.FlatStyle = FlatStyle.Flat
+        btnTA2.Font = New Font("Segoe UI", 32.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnTA2.ForeColor = Color.White
+        btnTA2.GradientBottom = SystemColors.InfoText
+        btnTA2.GradientTop = Color.Purple
+        btnTA2.Location = New Point(181, 6)
+        btnTA2.Margin = New Padding(4, 3, 4, 3)
+        btnTA2.Name = "btnTA2"
+        btnTA2.Size = New Size(164, 85)
+        btnTA2.TabIndex = 1
+        btnTA2.Text = "2"
+        btnTA2.UseVisualStyleBackColor = False
+        ' 
+        ' Password
+        ' 
+        Password.BackColor = Color.White
+        Password.Font = New Font("Segoe UI Semibold", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Password.ForeColor = Color.MidnightBlue
+        Password.Location = New Point(161, 3)
+        Password.Margin = New Padding(4, 3, 4, 3)
+        Password.Name = "Password"
+        Password.Size = New Size(379, 50)
+        Password.TabIndex = 0
+        Password.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' btnCancel
+        ' 
+        btnCancel.BackColor = Color.Transparent
+        btnCancel.DialogResult = DialogResult.Cancel
+        btnCancel.FlatAppearance.BorderSize = 0
+        btnCancel.FlatStyle = FlatStyle.Flat
+        btnCancel.Font = New Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnCancel.ForeColor = Color.White
+        btnCancel.Image = CType(resources.GetObject("btnCancel.Image"), Image)
+        btnCancel.Location = New Point(98, 479)
+        btnCancel.Margin = New Padding(4, 3, 4, 3)
+        btnCancel.Name = "btnCancel"
+        btnCancel.Size = New Size(77, 70)
+        btnCancel.TabIndex = 0
+        btnCancel.TextAlign = ContentAlignment.MiddleRight
+        btnCancel.UseVisualStyleBackColor = False
+        ' 
+        ' lblTime
+        ' 
+        lblTime.BackColor = Color.Transparent
+        lblTime.Font = New Font("Segoe UI", 48.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTime.ForeColor = Color.Purple
+        lblTime.Location = New Point(13, 320)
+        lblTime.Margin = New Padding(4, 0, 4, 0)
+        lblTime.Name = "lblTime"
+        lblTime.Size = New Size(510, 99)
+        lblTime.TabIndex = 389
+        lblTime.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' lblLicenseMessage
+        ' 
+        lblLicenseMessage.BackColor = Color.Transparent
+        lblLicenseMessage.BorderStyle = BorderStyle.FixedSingle
+        lblLicenseMessage.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
+        lblLicenseMessage.ForeColor = SystemColors.HotTrack
+        lblLicenseMessage.Location = New Point(562, 503)
+        lblLicenseMessage.Margin = New Padding(4, 0, 4, 0)
+        lblLicenseMessage.Name = "lblLicenseMessage"
+        lblLicenseMessage.Size = New Size(501, 40)
+        lblLicenseMessage.TabIndex = 393
+        lblLicenseMessage.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' lblDate
+        ' 
+        lblDate.BackColor = Color.Transparent
+        lblDate.BorderStyle = BorderStyle.FixedSingle
+        lblDate.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblDate.ForeColor = Color.Purple
+        lblDate.Location = New Point(562, 502)
+        lblDate.Margin = New Padding(4, 0, 4, 0)
+        lblDate.Name = "lblDate"
+        lblDate.Size = New Size(499, 42)
+        lblDate.TabIndex = 388
+        lblDate.TextAlign = ContentAlignment.MiddleCenter
+        lblDate.Visible = False
+        ' 
+        ' UserType
+        ' 
+        UserType.Font = New Font("Microsoft Sans Serif", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        UserType.ForeColor = Color.DarkViolet
+        UserType.Location = New Point(371, 173)
+        UserType.Margin = New Padding(4, 3, 4, 3)
+        UserType.Name = "UserType"
+        UserType.Size = New Size(38, 35)
+        UserType.TabIndex = 16
+        UserType.Visible = False
+        ' 
+        ' txtCurrentClockInID
+        ' 
+        txtCurrentClockInID.Location = New Point(13, 187)
+        txtCurrentClockInID.Margin = New Padding(4, 3, 4, 3)
+        txtCurrentClockInID.Name = "txtCurrentClockInID"
+        txtCurrentClockInID.Size = New Size(116, 23)
+        txtCurrentClockInID.TabIndex = 25
+        txtCurrentClockInID.Visible = False
+        ' 
+        ' Timer2
+        ' 
+        Timer2.Enabled = True
+        ' 
+        ' ToolTip1
+        ' 
+        ToolTip1.ToolTipIcon = ToolTipIcon.Info
+        ToolTip1.ToolTipTitle = "Database"
+        ' 
+        ' Label1
+        ' 
+        Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        Label1.BackColor = Color.Purple
+        Label1.Font = New Font("Segoe UI Semibold", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = Color.Turquoise
+        Label1.Location = New Point(-2, -4)
+        Label1.Margin = New Padding(4, 0, 4, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(1085, 50)
+        Label1.TabIndex = 403
+        Label1.Text = "EXAM TIME TABLE SUPERVISION SYSTEM"
+        Label1.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' frmLogin
+        ' 
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.White
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        BackgroundImageLayout = ImageLayout.Stretch
+        ClientSize = New Size(1079, 635)
+        Controls.Add(Panel1)
+        Controls.Add(UserID)
+        Controls.Add(Label1)
+        FormBorderStyle = FormBorderStyle.None
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        Margin = New Padding(4, 3, 4, 3)
+        MaximizeBox = False
+        MinimizeBox = False
+        Name = "frmLogin"
+        SizeGripStyle = SizeGripStyle.Hide
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Login Form"
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
+        Panel_Notify.ResumeLayout(False)
+        CType(pic_notify, ComponentModel.ISupportInitialize).EndInit()
+        TableLayoutPanel3.ResumeLayout(False)
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
@@ -669,8 +674,6 @@ Partial Class frmLogin
     Friend WithEvents TableLayoutPanel3 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents Password As System.Windows.Forms.TextBox
     Friend WithEvents UserType As System.Windows.Forms.TextBox
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnForgetPassword As System.Windows.Forms.Button
     Friend WithEvents txtCurrentClockInID As System.Windows.Forms.TextBox
     Friend WithEvents btnX As GelButtons.GelButton
@@ -694,10 +697,11 @@ Partial Class frmLogin
     Friend WithEvents Panel_Notify As Panel
     Friend WithEvents pic_notify As PictureBox
     Friend WithEvents lblNotify As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents GelButton1 As GelButtons.GelButton
     Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents Label1 As Label
 End Class

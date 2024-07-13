@@ -13,6 +13,8 @@ Imports System.Net.Http
 Imports System.Text
 Imports System.Threading.Tasks
 Imports System.Net
+Imports HavanoZimra
+
 Public Class frmLogin
     Public frmpmenu As New frmBackOffice
     Dim frm As New frmOption
@@ -22,7 +24,7 @@ Public Class frmLogin
     Dim variable2 As Double
     Dim fl As Boolean = False
     Dim s, x As String
-    '   Private Shared tm As New TrialMaker()
+    Private Shared tm As New TrialMaker()
     Dim allowBackOffice As String = "No"
     Dim vatFlag As String = ""
     Dim DriveLabel As String = ""
@@ -65,23 +67,78 @@ Public Class frmLogin
     End Sub
 
 
+    '
+
+    Public Async Function ProcessInvoicesAsync11() As Task
+        Dim cookieContainer As New CookieContainer()
+        cookieContainer.Add(New Uri("https://pos.alphazentechnologies.com"), New Cookie("full_name", "Guest"))
+        cookieContainer.Add(New Uri("https://pos.alphazentechnologies.com"), New Cookie("sid", "Guest"))
+        cookieContainer.Add(New Uri("https://pos.alphazentechnologies.com"), New Cookie("system_user", "no"))
+        cookieContainer.Add(New Uri("https://pos.alphazentechnologies.com"), New Cookie("user_id", "Guest"))
+        cookieContainer.Add(New Uri("https://pos.alphazentechnologies.com"), New Cookie("user_image", ""))
+
+        Dim handler As New HttpClientHandler() With {
+        .CookieContainer = cookieContainer
+    }
+
+        ' Create the HttpClient with the handler
+        Using client As New HttpClient(handler)
+            ' Add the authorization header with the token
+            Dim authValue As String = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{apikey}:{apiSecret}"))
+            client.DefaultRequestHeaders.Authorization = New Headers.AuthenticationHeaderValue("Basic", authValue)
+
+            ' Define the static invoice data object
+            Dim invoiceData As New With {
+            .selling_price_list = "Standard Selling",
+            .price_list_currency = "ZWL",
+            .plc_conversion_rate = 1,
+            .customer = "Walk In",
+            .company = "POS Demo (Demo)",
+            .currency = "ZWL",
+            .posting_date = "2024-06-10",
+            .due_date = "2024-06-17",
+            .set_warehouse = "Finished Goods - PDD",
+            .update_stock = 1,
+            .conversion_rate = 1.0,
+            .items = New Object() {
+                New With {
+                    .item_code = "SKU006",
+                    .item_name = "Coffee Mug",
+                    .qty = 1,
+                    .rate = 890
+                }
+            }
+        }
+
+            ' Serialize the invoice data to JSON
+            Dim json As String = JsonConvert.SerializeObject(invoiceData)
+            Dim content As New StringContent(json, Encoding.UTF8, "application/json")
+
+            ' Send the POST request to the API
+            Dim response As HttpResponseMessage = Await client.PostAsync("https://pos.alphazentechnologies.com/api/method/pos_api.api.make_sales_invoice", content)
+            Dim responseData As String = Await response.Content.ReadAsStringAsync()
+            '   RichTextBox1.Text = responseData
+            ' Check if the response is successful
+            If response.IsSuccessStatusCode Then
+                ' Success logic (if any) can be implemented here
+                MsgBox("Invoice posted successfully.")
+            Else
+                ' Show an error message if the request failed
+                MsgBox($"Failed to post invoice: {Await response.Content.ReadAsStringAsync()}")
+            End If
+        End Using
+    End Function
 
     Private Async Sub LoginForm1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 
 
 
-        ' Await AddProductAsync()
-        'Panel1.Location = New Point(Me.ClientSize.Width / 2 - Panel1.Size.Width / 2, Me.ClientSize.Height / 2 - Panel1.Size.Height / 2)
-        'Panel1.Anchor = AnchorStyles.None
-        Panel2.Width = Me.Width
-        cmbLoginType.SelectedIndex = 0
-        'Dim result As Boolean = HandleRegistry()
-        'If result = False Then 'something went wrong
-        '    MessageBox.Show("Trial expired" & vbCrLf & "for purchasing the full version of software call us at +919827858191", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        '    End
-
+        '  ValidateLicense()
         ReadConfigurations()
-
+        Try
+            '    Await return_creation_of_db()
+        Catch ex As Exception
+        End Try
     End Sub
 
     Public Function IsRevMaxEnabled() As Boolean
@@ -214,6 +271,7 @@ Public Class frmLogin
         If rdr.Read() Then
             UserID.Text = rdr.GetValue(0).ToString()
             UserType.Text = rdr.GetValue(2).ToString()
+
         Else
             btnScanCard.PerformClick()
         End If
@@ -234,7 +292,6 @@ Public Class frmLogin
     End Function
 
     Private Sub Password_TextChanged(sender As System.Object, e As System.EventArgs) Handles Password.TextChanged
-        '  And CLICKED < 9
 
         If (errorex.Length > 0 And CLICKED < 9) And ((Password.Text.Length = 4) Or cmbLoginType.SelectedIndex = 1) Then
             MessageBox.Show(errorex, "License Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -260,16 +317,29 @@ Public Class frmLogin
         con = New SqlConnection(cs)
         con.Open()
         cmd = con.CreateCommand()
-        cmd.CommandText = "SELECT RTRIM(UserID),RTRIM(Password),RTRIM(UserType),flogin FROM Registration where Password=@d1 And Active='Yes'"
+        cmd.CommandText = "SELECT RTRIM(UserID),RTRIM(Password),RTRIM(UserType) FROM Registration where Password=@d1 And Active='Yes'"
         cmd.Parameters.AddWithValue("@d1", EncryptToBase64(Password.Text))
+        ' MsgBox(EncryptToBase64(Password.Text))
         rdr = cmd.ExecuteReader()
         If rdr.Read() Then
             UserID.Text = rdr.GetValue(0).ToString()
             useronpc = rdr.GetValue(0).ToString()
             UserType.Text = rdr.GetValue(2).ToString()
             usertypeonpc = False
-            frmBackOffice.lblUser.Text = rdr.GetValue(2).ToString()
 
+            frmBackOffice.Dispose()
+            frmBackOffice.Show()
+            Me.Hide()
+            Return
+            If Trim(UserType.Text) = "Security Guard" Then
+
+            End If
+
+            If Not rdr.IsDBNull(3) Then
+                flogin = CBool(rdr.GetValue(3))
+            Else
+                flogin = True ' Assign True if the value is NULL
+            End If
 
 
         Else
@@ -278,9 +348,9 @@ Public Class frmLogin
         End If
         cmd.Dispose()
         con.Close()
-        '       MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        '  End Catch ex As Exception
-        ' Try
+        '   Catch ex As Exception
+        '      MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        '  End Try
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As System.Object, e As System.Windows.Forms.LinkLabelLinkClickedEventArgs)
@@ -296,6 +366,44 @@ Public Class frmLogin
             cmd.Parameters.AddWithValue("@d1", User)
             rdr = cmd.ExecuteReader()
             If Not rdr.Read() Then
+                ClockINSave(User)
+            End If
+            If (rdr IsNot Nothing) Then
+                rdr.Close()
+            End If
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.[Error])
+        End Try
+    End Sub
+    Sub CheckExistingClockIn(ByVal User As String)
+        Try
+            con = New SqlConnection(cs)
+            con.Open()
+            cmd = con.CreateCommand()
+            cmd.CommandText = "SELECT Top 1 ClockIN.ID from ClockIN where UserID=@d1 order by ClockIN.ID Desc"
+            cmd.Parameters.AddWithValue("@d1", User)
+            rdr = cmd.ExecuteReader()
+            If rdr.Read() Then
+                txtCurrentClockInID.Text = rdr.GetValue(0)
+            Else
+                txtCurrentClockInID.Text = 0
+            End If
+            If (rdr IsNot Nothing) Then
+                rdr.Close()
+            End If
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+            con = New SqlConnection(cs)
+            con.Open()
+            cmd = con.CreateCommand()
+            cmd.CommandText = "SELECT ClockINID from ClockOUT where ClockInID=@d1"
+            cmd.Parameters.AddWithValue("@d1", Val(txtCurrentClockInID.Text))
+            rdr = cmd.ExecuteReader()
+            If rdr.Read() Then
                 ClockINSave(User)
             End If
             If (rdr IsNot Nothing) Then
@@ -351,7 +459,146 @@ Public Class frmLogin
     End Sub
 
     Dim errorex As String = ""
+    Private Sub ValidateLicense()
 
+
+        tm.ProductInfo = New ProductInfo() With {
+        .ID = "#HAVANO1234#",
+        .Name = "HavanoPOS",
+        .Owner = "info@havano.co",
+        .TotalDays = 30,
+        .PurchasePage = "www.havano.co"
+    }
+        tm.TrackTime = True
+        tm.TrackUsage = True
+        AddHandler tm.TimeTracking, AddressOf OnTimeTrackerRunning
+
+
+        'If Not tm.LicenseExists Then
+        '    Dim startFreeTrialForm As New StartFreeTrial()
+        '    startFreeTrialForm.ShowDialog()
+        'End If
+
+        Dim lic = tm.Validate()
+        ' lic.
+        'Try
+        If tm.IsSystemBackdated = True Then
+            MessageBox.Show(Me, "Invalide License, System date is not valid" & vbCr & "Please contact support to request for license key", "License Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Hide()
+        End If
+        Dim differdate As TimeSpan = lic.ExpiryDate - DateTime.Today
+        'MsgBox(lic.ActivationDate)
+        'MessageBox.Show(differdate.Days.ToString())
+        If differdate.Days > 0 Then
+            expiry_status = False
+        End If
+        If differdate.Days <= 30 AndAlso differdate.Days > 0 Then
+            'expiry_status = False
+            MessageBox.Show($"License About to Expire in {differdate.Days} Days (contact your agent or email support@havano.net or visit website www.havano.net)", $" {differdate.Days} Days Left to Expire", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        ElseIf differdate.Days < 0 Then
+            MessageBox.Show($"License Has Expired {Math.Abs(differdate.Days)} Days Ago", $"License Has Expired {Math.Abs(differdate.Days)} Days Ago", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            expiry_status = True
+        End If
+        '  Catch ex As Exception
+        ' errorex = ex.ToString()
+        'End Try
+        If lic.Status = LicenseStatus.Active Then
+            If lic.FirstTime AndAlso lic.Type = LicenseTypes.FreeTrial Then
+                MessageBox.Show(
+            $"Your license information:{Environment.NewLine}" +
+            $" * Product: {lic.Product}{Environment.NewLine}" +
+            $" * License Key: {lic.LicenseKey}{Environment.NewLine}" +
+            $" * License Status: {lic.Status}{Environment.NewLine}" +
+            $" * Activation Date: {lic.ActivationDate}{Environment.NewLine}" +
+            $" * Expiry Date: {lic.ExpiryDate}{Environment.NewLine}" +
+            $" * Total Days: {lic.TotalDays}{Environment.NewLine}" +
+            $" * Remaining Days: {lic.RemainingDays}",
+            $"{lic.TotalDays}-day Free Trial Activated")
+
+            End If
+            UpdateTitles(lic)
+        ElseIf lic.Type = LicenseTypes.FreeTrial Then
+            Dim used_days As TimeSpan = DateTime.Today - lic.ActivationDate
+            If lic.ActivationDate.Year > Date.Now.Year Or used_days.Days > 30 Then
+                MessageBox.Show(Me, "Invalide License, System date is not valid" & vbCr & "Please contact support to request for license key", "License Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Me.Hide()
+                '  frmActivation.ShowDialog()
+            End If
+        ElseIf lic.Status = LicenseStatus.Expired Then
+            MessageBox.Show(
+            $"Your {lic.TotalDays}-day license has expired. " +
+            $"Please purchase a premium license to continue.")
+            expiry_status = True
+            'Me.Hide()
+            'frmActivation.ShowDialog()
+            '   Application.Exit()
+        ElseIf lic.Status = LicenseStatus.Invalid Then
+            Dim errors = String.Join($"{Environment.NewLine}", tm.ValidationErrors)
+            Dim messageTitle = "The following errors were found upon validation:"
+            Dim messageFooter = "Please ensure they are resolved before continuing"
+            If tm.ValidationErrors.Count >= 1 Then
+                messageTitle = "The following errors were found upon validation:"
+                messageFooter = "Please ensure it is resolved before continuing"
+            End If
+            MessageBox.Show(
+                $"{messageTitle}{Environment.NewLine}{errors}{Environment.NewLine}{Environment.NewLine}{messageFooter}",
+                "License Invalid")
+            Application.Exit()
+        End If
+
+    End Sub
+
+    Public Sub UpdateTitles()
+        Dim license = TrialMaker.RetrievedLicense
+        If license.Type = LicenseTypes.Premium Then
+            'activatePremiumToolStripMenuItem.Visible = False
+            'EvaluationMessage = "Premium"
+            'Text = $"{license.Product} ({EvaluationMessage})"
+            lblLicenseMessage.Text = $"{license.Product} " & $"Licensed to {license.Client}"
+            lblNotify.Text = "License Status: " & license.RemainingDays & " days to expire"
+            If license.RemainingDays < 32 Then
+                Panel_Notify.Visible = True
+            Else
+                Panel_Notify.Visible = False
+            End If
+            lblLicenseMessage.ForeColor = Color.ForestGreen
+        Else
+            Dim expiryDate As Date = license.ExpiryDate
+            'EvaluationMessage = $"{license.TotalDays}-day Evaluation"
+            Dim datePartA As String = $"{expiryDate.ToString("dddd dd")}{GetDaySuffix(expiryDate.Day)} "
+            Dim datePartB As String = expiryDate.ToString("MMMM, yyyy")
+            Dim ExpirationMessage As String = $"{datePartA}{datePartB}"
+            'Text = $"{license.Product} ({EvaluationMessage})"
+            lblLicenseMessage.Text = $"Evaluation period expires on {ExpirationMessage}"
+        End If
+    End Sub
+
+    Public Sub UpdateTitles(ByVal license As Models.License)
+        If license.Type = LicenseTypes.Premium Then
+            'activatePremiumToolStripMenuItem.Visible = False
+            'EvaluationMessage = "Premium"
+
+            'Text = $"{license.Product} ({EvaluationMessage})"
+            lblLicenseMessage.Text = "Premium " & $"{license.Product} " & $"Licensed to {license.Client}"
+            lblNotify.Text = "License Status: " & license.RemainingDays & " days to expire"
+            If license.RemainingDays < 32 Then
+                Panel_Notify.Visible = True
+            Else
+                Panel_Notify.Visible = False
+            End If
+            lblLicenseMessage.ForeColor = Color.ForestGreen
+        Else
+            Dim expiryDate As Date = license.ExpiryDate
+            'EvaluationMessage = $"{license.TotalDays}-day Evaluation"
+            '  btnTrial.Enabled = False
+            Dim datePartA As String = $"{expiryDate.ToString("dddd dd")}{GetDaySuffix(expiryDate.Day)} "
+            Dim datePartB As String = expiryDate.ToString("MMMM, yyyy")
+            Dim ExpirationMessage As String = $"{datePartA}{datePartB}"
+
+            'Text = $"{license.Product} ({EvaluationMessage})"
+            lblLicenseMessage.Text = $"Evaluation period expires on {ExpirationMessage}"
+        End If
+    End Sub
 
     Public Function GetDaySuffix(ByVal day As Integer) As String
         Select Case day
@@ -372,14 +619,14 @@ Public Class frmLogin
     End Sub
 
 
-
-    Sub IntCulturalFormattingChanges()
+    Sub InitCulturalFormattingChanges()
         Dim cultureInfo As CultureInfo = DirectCast(Thread.CurrentThread.CurrentCulture.Clone(), CultureInfo)
         cultureInfo.DateTimeFormat.ShortDatePattern = "dd/MM/yyyy"
         Thread.CurrentThread.CurrentCulture = cultureInfo
     End Sub
 
     Public Sub ReadConfigurations()
+        InitCulturalFormattingChanges()
         Dim drives As DriveInfo() = DriveInfo.GetDrives()
         Dim path As String = ""
         For Each driveInfo As DriveInfo In drives
@@ -399,6 +646,7 @@ Public Class frmLogin
         ElseIf File.Exists("config.ini") Then
             path = "config.ini"
         End If
+
         If path.Trim().Length <= 5 Then
             Return
         End If
@@ -473,16 +721,7 @@ Public Class frmLogin
         End Try
     End Sub
 
-    Private Sub btnEndDay_Click(sender As Object, e As EventArgs)
-        Try
-            'Dim revmax As New Revmaxlib()
-            Dim revresponse As String = revmax.ZReport()
-            Dim revMsg As ZRoot = JsonConvert.DeserializeObject(Of ZRoot)(revresponse)
-            MessageBox.Show(Me, revMsg.Message, "D", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-    End Sub
+
 
 
     Private Sub Panel3_Click(sender As Object, e As EventArgs)

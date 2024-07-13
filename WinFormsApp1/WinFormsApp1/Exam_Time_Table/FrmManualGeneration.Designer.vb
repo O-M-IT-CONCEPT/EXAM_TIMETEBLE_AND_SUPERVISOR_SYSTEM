@@ -22,89 +22,90 @@ Partial Class FrmManualGeneration
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.dgwManual = New System.Windows.Forms.DataGridView()
-        Me.btnSave = New System.Windows.Forms.Button()
-        CType(Me.dgwManual, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'dgwManual
-        '
-        Me.dgwManual.AllowUserToAddRows = False
-        Me.dgwManual.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FloralWhite
-        Me.dgwManual.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgwManual.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgwManual.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgwManual.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.dgwManual.BackgroundColor = System.Drawing.Color.White
-        Me.dgwManual.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Purple
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSteelBlue
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgwManual.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dgwManual.ColumnHeadersHeight = 37
-        Me.dgwManual.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.dgwManual.EnableHeadersVisualStyles = False
-        Me.dgwManual.GridColor = System.Drawing.Color.White
-        Me.dgwManual.Location = New System.Drawing.Point(12, 12)
-        Me.dgwManual.MultiSelect = False
-        Me.dgwManual.Name = "dgwManual"
-        Me.dgwManual.ReadOnly = True
-        Me.dgwManual.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Moccasin
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgwManual.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.dgwManual.RowHeadersWidth = 25
-        Me.dgwManual.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Moccasin
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black
-        Me.dgwManual.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.dgwManual.RowTemplate.Height = 44
-        Me.dgwManual.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgwManual.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.dgwManual.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgwManual.Size = New System.Drawing.Size(1006, 561)
-        Me.dgwManual.TabIndex = 408
-        '
-        'btnSave
-        '
-        Me.btnSave.Location = New System.Drawing.Point(12, 580)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(100, 30)
-        Me.btnSave.TabIndex = 409
-        Me.btnSave.Text = "Save"
-        Me.btnSave.UseVisualStyleBackColor = True
-        '
-        'FrmManualGeneration
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1030, 622)
-        Me.Controls.Add(Me.btnSave)
-        Me.Controls.Add(Me.dgwManual)
-        Me.Name = "FrmManualGeneration"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmManualGeneration"
-        CType(Me.dgwManual, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        dgwManual = New DataGridView()
+        btnSave = New Button()
+        CType(dgwManual, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' dgwManual
+        ' 
+        dgwManual.AllowUserToAddRows = False
+        dgwManual.AllowUserToDeleteRows = False
+        dgwManual.AllowUserToOrderColumns = True
+        DataGridViewCellStyle1.BackColor = Color.FloralWhite
+        dgwManual.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        dgwManual.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        dgwManual.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgwManual.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+        dgwManual.BackgroundColor = Color.White
+        dgwManual.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = Color.Purple
+        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle2.ForeColor = Color.White
+        DataGridViewCellStyle2.SelectionBackColor = Color.LightSteelBlue
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        dgwManual.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        dgwManual.ColumnHeadersHeight = 37
+        dgwManual.Cursor = Cursors.Hand
+        dgwManual.EnableHeadersVisualStyles = False
+        dgwManual.GridColor = Color.White
+        dgwManual.Location = New Point(14, 14)
+        dgwManual.Margin = New Padding(4, 3, 4, 3)
+        dgwManual.MultiSelect = False
+        dgwManual.Name = "dgwManual"
+        dgwManual.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = Color.White
+        DataGridViewCellStyle3.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = Color.Moccasin
+        DataGridViewCellStyle3.SelectionForeColor = Color.Black
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
+        dgwManual.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        dgwManual.RowHeadersWidth = 25
+        dgwManual.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        DataGridViewCellStyle4.BackColor = Color.White
+        DataGridViewCellStyle4.Font = New Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle4.SelectionBackColor = Color.Moccasin
+        DataGridViewCellStyle4.SelectionForeColor = Color.Black
+        dgwManual.RowsDefaultCellStyle = DataGridViewCellStyle4
+        dgwManual.RowTemplate.Height = 44
+        dgwManual.RowTemplate.Resizable = DataGridViewTriState.False
+        dgwManual.ScrollBars = ScrollBars.Vertical
+        dgwManual.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgwManual.Size = New Size(1174, 647)
+        dgwManual.TabIndex = 408
+        ' 
+        ' btnSave
+        ' 
+        btnSave.Location = New Point(14, 669)
+        btnSave.Margin = New Padding(4, 3, 4, 3)
+        btnSave.Name = "btnSave"
+        btnSave.Size = New Size(117, 35)
+        btnSave.TabIndex = 409
+        btnSave.Text = "Save"
+        btnSave.UseVisualStyleBackColor = True
+        ' 
+        ' FrmManualGeneration
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.White
+        ClientSize = New Size(1202, 718)
+        Controls.Add(btnSave)
+        Controls.Add(dgwManual)
+        Margin = New Padding(4, 3, 4, 3)
+        Name = "FrmManualGeneration"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "FrmManualGeneration"
+        CType(dgwManual, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
 
     End Sub
 

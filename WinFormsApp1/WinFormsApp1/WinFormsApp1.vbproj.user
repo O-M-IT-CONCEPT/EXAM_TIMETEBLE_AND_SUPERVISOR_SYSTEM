@@ -43,6 +43,9 @@
     <Compile Update="Exam_Time_Table\frmOption.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Exam_Time_Table\frmRegistration.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Exam_Time_Table\frmSettings.vb">
       <SubType>Form</SubType>
     </Compile>

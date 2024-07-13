@@ -23,197 +23,212 @@ Partial Class Frm_TimeTable_genration_system
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_TimeTable_genration_system))
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.cmbdept = New System.Windows.Forms.ComboBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.cmbfac = New System.Windows.Forms.ComboBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.cmbsem = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.cmbses = New System.Windows.Forms.ComboBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.btnUpdate = New GelButtons.GelButton()
-        Me.btnSave = New GelButtons.GelButton()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Label17)
-        Me.GroupBox1.Controls.Add(Me.cmbdept)
-        Me.GroupBox1.Controls.Add(Me.Label16)
-        Me.GroupBox1.Controls.Add(Me.cmbfac)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(509, 88)
-        Me.GroupBox1.TabIndex = 398
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Dept And Faculty"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label17.Location = New System.Drawing.Point(6, 57)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(82, 17)
-        Me.Label17.TabIndex = 45
-        Me.Label17.Text = "Department"
-        '
-        'cmbdept
-        '
-        Me.cmbdept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbdept.FormattingEnabled = True
-        Me.cmbdept.Location = New System.Drawing.Point(111, 52)
-        Me.cmbdept.Name = "cmbdept"
-        Me.cmbdept.Size = New System.Drawing.Size(382, 21)
-        Me.cmbdept.TabIndex = 44
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label16.Location = New System.Drawing.Point(6, 22)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(53, 17)
-        Me.Label16.TabIndex = 43
-        Me.Label16.Text = "Faculty"
-        '
-        'cmbfac
-        '
-        Me.cmbfac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbfac.FormattingEnabled = True
-        Me.cmbfac.Location = New System.Drawing.Point(113, 22)
-        Me.cmbfac.Name = "cmbfac"
-        Me.cmbfac.Size = New System.Drawing.Size(380, 21)
-        Me.cmbfac.TabIndex = 42
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.cmbsem)
-        Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.cmbses)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 106)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(509, 88)
-        Me.GroupBox2.TabIndex = 399
-        Me.GroupBox2.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label1.Location = New System.Drawing.Point(6, 57)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(68, 17)
-        Me.Label1.TabIndex = 45
-        Me.Label1.Text = "Semester"
-        '
-        'cmbsem
-        '
-        Me.cmbsem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbsem.FormattingEnabled = True
-        Me.cmbsem.Items.AddRange(New Object() {"First Semester", "Second Semester", "Third Semester"})
-        Me.cmbsem.Location = New System.Drawing.Point(111, 52)
-        Me.cmbsem.Name = "cmbsem"
-        Me.cmbsem.Size = New System.Drawing.Size(382, 21)
-        Me.cmbsem.TabIndex = 44
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label2.Location = New System.Drawing.Point(6, 22)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(58, 17)
-        Me.Label2.TabIndex = 43
-        Me.Label2.Text = "Session"
-        '
-        'cmbses
-        '
-        Me.cmbses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbses.FormattingEnabled = True
-        Me.cmbses.Items.AddRange(New Object() {"Admin", "Cashier", "Store Manager", "Inventory Manager", "Store Keeper", "Employee", "Security Guard"})
-        Me.cmbses.Location = New System.Drawing.Point(113, 22)
-        Me.cmbses.Name = "cmbses"
-        Me.cmbses.Size = New System.Drawing.Size(380, 21)
-        Me.cmbses.TabIndex = 42
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(527, 20)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(109, 43)
-        Me.CheckBox1.TabIndex = 402
-        Me.CheckBox1.Text = "Allocate Lecturer " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Based on " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Department"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'btnUpdate
-        '
-        Me.btnUpdate.BackColor = System.Drawing.Color.SteelBlue
-        Me.btnUpdate.Enabled = False
-        Me.btnUpdate.FlatAppearance.BorderSize = 0
-        Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnUpdate.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUpdate.ForeColor = System.Drawing.Color.White
-        Me.btnUpdate.GradientBottom = System.Drawing.Color.Purple
-        Me.btnUpdate.GradientTop = System.Drawing.Color.DarkMagenta
-        Me.btnUpdate.Image = CType(resources.GetObject("btnUpdate.Image"), System.Drawing.Image)
-        Me.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnUpdate.Location = New System.Drawing.Point(538, 141)
-        Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(89, 59)
-        Me.btnUpdate.TabIndex = 401
-        Me.btnUpdate.Text = "Auto " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Generate"
-        Me.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnUpdate.UseVisualStyleBackColor = False
-        '
-        'btnSave
-        '
-        Me.btnSave.BackColor = System.Drawing.Color.SteelBlue
-        Me.btnSave.FlatAppearance.BorderSize = 0
-        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSave.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.GradientBottom = System.Drawing.Color.Purple
-        Me.btnSave.GradientTop = System.Drawing.Color.DarkMagenta
-        Me.btnSave.Image = CType(resources.GetObject("btnSave.Image"), System.Drawing.Image)
-        Me.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSave.Location = New System.Drawing.Point(538, 69)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(89, 66)
-        Me.btnSave.TabIndex = 400
-        Me.btnSave.Text = "Generate" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Manually"
-        Me.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSave.UseVisualStyleBackColor = False
-        '
-        'Frm_TimeTable_genration_system
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(639, 209)
-        Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.btnUpdate)
-        Me.Controls.Add(Me.btnSave)
-        Me.MaximizeBox = False
-        Me.Name = "Frm_TimeTable_genration_system"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "TIME TABLE SYSTEM"
-        Me.TopMost = True
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        GroupBox1 = New GroupBox()
+        Label17 = New Label()
+        cmbdept = New ComboBox()
+        Label16 = New Label()
+        cmbfac = New ComboBox()
+        GroupBox2 = New GroupBox()
+        Label1 = New Label()
+        cmbsem = New ComboBox()
+        Label2 = New Label()
+        cmbses = New ComboBox()
+        CheckBox1 = New CheckBox()
+        btnUpdate = New GelButtons.GelButton()
+        btnSave = New GelButtons.GelButton()
+        GroupBox1.SuspendLayout()
+        GroupBox2.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.Controls.Add(Label17)
+        GroupBox1.Controls.Add(cmbdept)
+        GroupBox1.Controls.Add(Label16)
+        GroupBox1.Controls.Add(cmbfac)
+        GroupBox1.Location = New Point(14, 14)
+        GroupBox1.Margin = New Padding(4, 3, 4, 3)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Padding = New Padding(4, 3, 4, 3)
+        GroupBox1.Size = New Size(594, 102)
+        GroupBox1.TabIndex = 398
+        GroupBox1.TabStop = False
+        GroupBox1.Text = "Dept And Faculty"
+        ' 
+        ' Label17
+        ' 
+        Label17.AutoSize = True
+        Label17.Font = New Font("Microsoft Sans Serif", 10F)
+        Label17.Location = New Point(7, 66)
+        Label17.Margin = New Padding(4, 0, 4, 0)
+        Label17.Name = "Label17"
+        Label17.Size = New Size(82, 17)
+        Label17.TabIndex = 45
+        Label17.Text = "Department"
+        ' 
+        ' cmbdept
+        ' 
+        cmbdept.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbdept.FormattingEnabled = True
+        cmbdept.Location = New Point(130, 60)
+        cmbdept.Margin = New Padding(4, 3, 4, 3)
+        cmbdept.Name = "cmbdept"
+        cmbdept.Size = New Size(445, 23)
+        cmbdept.TabIndex = 44
+        ' 
+        ' Label16
+        ' 
+        Label16.AutoSize = True
+        Label16.Font = New Font("Microsoft Sans Serif", 10F)
+        Label16.Location = New Point(7, 25)
+        Label16.Margin = New Padding(4, 0, 4, 0)
+        Label16.Name = "Label16"
+        Label16.Size = New Size(53, 17)
+        Label16.TabIndex = 43
+        Label16.Text = "Faculty"
+        ' 
+        ' cmbfac
+        ' 
+        cmbfac.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbfac.FormattingEnabled = True
+        cmbfac.Location = New Point(132, 25)
+        cmbfac.Margin = New Padding(4, 3, 4, 3)
+        cmbfac.Name = "cmbfac"
+        cmbfac.Size = New Size(443, 23)
+        cmbfac.TabIndex = 42
+        ' 
+        ' GroupBox2
+        ' 
+        GroupBox2.Controls.Add(Label1)
+        GroupBox2.Controls.Add(cmbsem)
+        GroupBox2.Controls.Add(Label2)
+        GroupBox2.Controls.Add(cmbses)
+        GroupBox2.Location = New Point(14, 122)
+        GroupBox2.Margin = New Padding(4, 3, 4, 3)
+        GroupBox2.Name = "GroupBox2"
+        GroupBox2.Padding = New Padding(4, 3, 4, 3)
+        GroupBox2.Size = New Size(594, 102)
+        GroupBox2.TabIndex = 399
+        GroupBox2.TabStop = False
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Microsoft Sans Serif", 10F)
+        Label1.Location = New Point(7, 66)
+        Label1.Margin = New Padding(4, 0, 4, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(68, 17)
+        Label1.TabIndex = 45
+        Label1.Text = "Semester"
+        ' 
+        ' cmbsem
+        ' 
+        cmbsem.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbsem.FormattingEnabled = True
+        cmbsem.Items.AddRange(New Object() {"First Semester", "Second Semester", "Third Semester"})
+        cmbsem.Location = New Point(130, 60)
+        cmbsem.Margin = New Padding(4, 3, 4, 3)
+        cmbsem.Name = "cmbsem"
+        cmbsem.Size = New Size(445, 23)
+        cmbsem.TabIndex = 44
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Microsoft Sans Serif", 10F)
+        Label2.Location = New Point(7, 25)
+        Label2.Margin = New Padding(4, 0, 4, 0)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(58, 17)
+        Label2.TabIndex = 43
+        Label2.Text = "Session"
+        ' 
+        ' cmbses
+        ' 
+        cmbses.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbses.FormattingEnabled = True
+        cmbses.Items.AddRange(New Object() {"Admin", "Cashier", "Store Manager", "Inventory Manager", "Store Keeper", "Employee", "Security Guard"})
+        cmbses.Location = New Point(132, 25)
+        cmbses.Margin = New Padding(4, 3, 4, 3)
+        cmbses.Name = "cmbses"
+        cmbses.Size = New Size(443, 23)
+        cmbses.TabIndex = 42
+        ' 
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.Location = New Point(615, 23)
+        CheckBox1.Margin = New Padding(4, 3, 4, 3)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(118, 49)
+        CheckBox1.TabIndex = 402
+        CheckBox1.Text = "Allocate Lecturer " & vbCrLf & "Based on " & vbCrLf & "Department"
+        CheckBox1.UseVisualStyleBackColor = True
+        ' 
+        ' btnUpdate
+        ' 
+        btnUpdate.BackColor = Color.SteelBlue
+        btnUpdate.FlatAppearance.BorderSize = 0
+        btnUpdate.FlatStyle = FlatStyle.Popup
+        btnUpdate.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnUpdate.ForeColor = Color.White
+        btnUpdate.GradientBottom = Color.Purple
+        btnUpdate.GradientTop = Color.DarkMagenta
+        btnUpdate.Image = CType(resources.GetObject("btnUpdate.Image"), Image)
+        btnUpdate.ImageAlign = ContentAlignment.MiddleLeft
+        btnUpdate.Location = New Point(628, 163)
+        btnUpdate.Margin = New Padding(4, 3, 4, 3)
+        btnUpdate.Name = "btnUpdate"
+        btnUpdate.Size = New Size(104, 68)
+        btnUpdate.TabIndex = 401
+        btnUpdate.Text = "Auto " & vbCrLf & "Generate"
+        btnUpdate.TextAlign = ContentAlignment.MiddleRight
+        btnUpdate.UseVisualStyleBackColor = False
+        ' 
+        ' btnSave
+        ' 
+        btnSave.BackColor = Color.SteelBlue
+        btnSave.FlatAppearance.BorderSize = 0
+        btnSave.FlatStyle = FlatStyle.Popup
+        btnSave.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSave.ForeColor = Color.White
+        btnSave.GradientBottom = Color.Purple
+        btnSave.GradientTop = Color.DarkMagenta
+        btnSave.Image = CType(resources.GetObject("btnSave.Image"), Image)
+        btnSave.ImageAlign = ContentAlignment.MiddleLeft
+        btnSave.Location = New Point(628, 80)
+        btnSave.Margin = New Padding(4, 3, 4, 3)
+        btnSave.Name = "btnSave"
+        btnSave.Size = New Size(104, 76)
+        btnSave.TabIndex = 400
+        btnSave.Text = "Generate" & vbCrLf & "Manually"
+        btnSave.TextAlign = ContentAlignment.MiddleRight
+        btnSave.UseVisualStyleBackColor = False
+        ' 
+        ' Frm_TimeTable_genration_system
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.White
+        ClientSize = New Size(746, 241)
+        Controls.Add(CheckBox1)
+        Controls.Add(GroupBox2)
+        Controls.Add(GroupBox1)
+        Controls.Add(btnUpdate)
+        Controls.Add(btnSave)
+        Margin = New Padding(4, 3, 4, 3)
+        MaximizeBox = False
+        Name = "Frm_TimeTable_genration_system"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "TIME TABLE SYSTEM"
+        TransparencyKey = Color.FromArgb(CByte(0), CByte(64), CByte(64))
+        GroupBox1.ResumeLayout(False)
+        GroupBox1.PerformLayout()
+        GroupBox2.ResumeLayout(False)
+        GroupBox2.PerformLayout()
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
 

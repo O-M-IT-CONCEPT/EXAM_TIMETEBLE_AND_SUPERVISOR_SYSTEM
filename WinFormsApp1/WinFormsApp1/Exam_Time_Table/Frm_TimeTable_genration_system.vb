@@ -6,6 +6,7 @@ Public Class Frm_TimeTable_genration_system
         LoadFaculties()
         LoadSessions()
     End Sub
+
     Private Sub LoadFaculties()
         Dim sql As String = "SELECT id, faculty FROM Faculty"
         Dim dt As DataTable = Crud(sql, Nothing)
@@ -14,15 +15,29 @@ Public Class Frm_TimeTable_genration_system
         cmbfac.ValueMember = "id"
     End Sub
     Private Sub LoadDepartments()
-        Dim sql As String = "SELECT id, dept FROM dept WHERE facultyid = @faculty_id"
-        Dim sqlParameters As New List(Of SqlParameter) From {
-            New SqlParameter("@faculty_id", SqlDbType.Int) With {.Value = cmbfac.SelectedValue}
-        }
-        Dim dt As DataTable = Crud(sql, sqlParameters)
-        cmbdept.DataSource = dt
-        cmbdept.DisplayMember = "dept"
-        cmbdept.ValueMember = "id"
+        Dim selectedValue As Object = cmbfac.SelectedValue
+        If selectedValue IsNot Nothing Then
+            Dim facultyId As Integer
+
+            ' Check if the selected value is a DataRowView, if so, get the actual value.
+            If TypeOf selectedValue Is DataRowView Then
+                facultyId = Convert.ToInt32(CType(selectedValue, DataRowView)("id"))
+            Else
+                facultyId = Convert.ToInt32(selectedValue)
+            End If
+
+            Dim sql As String = "SELECT id, dept FROM dept WHERE facultyid = @id"
+            Dim sqlParameters As New List(Of SqlParameter)
+            sqlParameters.Add(New SqlParameter("@id", SqlDbType.Int) With {.Value = facultyId})
+
+            ' Load departments for cmbdept
+            Dim dtDept As DataTable = Crud(sql, sqlParameters)
+            cmbdept.DataSource = dtDept
+            cmbdept.DisplayMember = "dept"
+            cmbdept.ValueMember = "id"
+        End If
     End Sub
+
     Private Sub LoadSessions()
         Dim currentYear As Integer = DateTime.Now.Year
         Dim sessions As New List(Of String)
@@ -58,7 +73,7 @@ Public Class Frm_TimeTable_genration_system
             Dim courseId As Integer = course("id")
             Dim deptId As Integer = course("deptid")
             Dim facultyId As Integer = course("facultyid")
-            Dim venueId As Integer = course("venueid")
+            Dim venueId As Integer = 1 ' Assuming venueid is assigned manually or default to 1
             Dim assignedLecturers As New List(Of Integer)
             For Each day As String In days
                 For Each timeSlot As String In timeSlots

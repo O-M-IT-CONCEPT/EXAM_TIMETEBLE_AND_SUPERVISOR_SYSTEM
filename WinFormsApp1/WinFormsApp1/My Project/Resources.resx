@@ -127,11 +127,14 @@
   <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Button-Delete-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button-Delete-icon12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Log Out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Log Out2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BODepartment_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BODepartment_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Apply_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Apply_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Colors_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Colors_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,9 +160,6 @@
   <data name="hotel-2-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hotel-2-22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="abstract_dark_wood_textures_backgrounds_1280x720" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\abstract_dark_wood_textures_backgrounds_1280x7201.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Accounting-Calculatorssssssssss-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Accounting-Calculatorssssssssss-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,11 +178,11 @@
   <data name="Calendar22-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Calendar22-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="banking" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\banking1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Designer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Designer2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlueBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BlueBG2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hmslogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hmslogo2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,17 +205,23 @@
   <data name="booking-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\booking-icon1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Actions-list-add-user-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Actions-list-add-user-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="havano_Pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\havano_Pic2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BO_Attention_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BO_Attention_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Action_Security_ChangePassword_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Action_Security_ChangePassword_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BO_Phone_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BO_Phone_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="category-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\category-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ms_word1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ms_word2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1452835584_Newspaper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1452835584_Newspaper1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -228,12 +234,6 @@
   </data>
   <data name="Attach_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Attach_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BO_Quote" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BO_Quote1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="havano_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\havano_bg3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BOContact_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BOContact_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,17 +256,14 @@
   <data name="discount" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\discount2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ms_word1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ms_word2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="about" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\about2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="barcode-folded-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barcode-folded-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Actions-list-add-user-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Actions-list-add-user-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="send_sms" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\send_sms1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Billing-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Billing-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,8 +283,8 @@
   <data name="Apply_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Apply_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="attache camera" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\attache camera1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BOSale_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BOSale_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Download_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Download_32x322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -301,11 +298,11 @@
   <data name="notepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\notepad1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Button-Delete-icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button-Delete-icon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="hotel-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hotel-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="basket-full-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\basket-full-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bed1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -333,6 +330,9 @@
   </data>
   <data name="Send_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Send_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vat-calculator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vat-calculator1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -379,6 +379,9 @@
   <data name="BO_Order_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BO_Order_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="check out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check out1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cash1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -403,6 +406,9 @@
   <data name="calculator" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calculator1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Check in" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Check in1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BOPermission_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BOPermission_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -421,17 +427,20 @@
   <data name="database_reset" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\database_reset2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Home_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Home_32x322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cash-flow(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cash-flow(1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlueBG1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BlueBG11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Household-Room-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Household-Room-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="notify" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\notify1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Activate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Activate2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button-Delete-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Delete-icon12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cd-rom-driver-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cd-rom-driver-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -445,17 +454,14 @@
   <data name="s4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\s42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Company11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Company12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="blue-gradient-clean-sand-texture-background-hd-500x281" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blue-gradient-clean-sand-texture-background-hd-500x2811.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1448464348547" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\14484643485471.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="guinness_bee6r-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\guinness_bee6r-5122.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="banking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banking1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Delete-group-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete-group-icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -463,11 +469,11 @@
   <data name="bank-account" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bank-account1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="color-line" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\color-line1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1452835529_Newspaper_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1452835529_Newspaper_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="send_sms" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\send_sms1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Admin-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Admin-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -481,6 +487,9 @@
   <data name="document-print" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\document-print2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="category-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\category-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Background books entry4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background books entry41.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -493,9 +502,6 @@
   <data name="absent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\absent1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Hotels_B-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Hotels_B-5121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="batch_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\batch_white1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -505,17 +511,14 @@
   <data name="1452835554_Food_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1452835554_Food_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="color-line" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\color-line1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Hotels_B-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hotels_B-5121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="11949857921496995420hotel_icon_in_room_bagg_01.svg.med1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\11949857921496995420hotel_icon_in_room_bagg_01.svg.med11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BOSale_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BOSale_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Log Out" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Log Out2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Button-Delete-icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button-Delete-icon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BOPosition2_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BOPosition2_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -532,17 +535,14 @@
   <data name="book2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\book21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Action_Security_ChangePassword_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Action_Security_ChangePassword_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="notify" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notify1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="close_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close_small2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button-Ok-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button-Ok-icon11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logout2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="taskmanager" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\taskmanager1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -552,9 +552,6 @@
   </data>
   <data name="bom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bom1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BOEmployee_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BOEmployee_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ALetter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ALetter1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -568,14 +565,17 @@
   <data name="havano_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\havano_logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="guinness_bee6r-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guinness_bee6r-5122.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="hotelier 16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hotelier 161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="book-keeping-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\book-keeping-5121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BOEmployee_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BOEmployee_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BlueBG1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BlueBG11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="havano_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\havano_bg3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ms_paint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ms_paint1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -592,8 +592,8 @@
   <data name="ms_word" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ms_word1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BlueBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BlueBG2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Home_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home_32x322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Company1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Company11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -601,11 +601,14 @@
   <data name="11949857921496995420hotel_icon_in_room_bagg_01.svg.med" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\11949857921496995420hotel_icon_in_room_bagg_01.svg.med2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="basket-full-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\basket-full-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="book-keeping-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book-keeping-5121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ecommerce_Icons_Rose_Color-50-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ecommerce_Icons_Rose_Color-50-322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="abstract_dark_wood_textures_backgrounds_1280x720" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\abstract_dark_wood_textures_backgrounds_1280x7201.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bank-statement" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bank-statement1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -613,17 +616,17 @@
   <data name="BOEmployee_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BOEmployee_16x161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Apply_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Apply_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Company11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Company12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="check out" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\check out1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="attache camera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\attache camera1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Delete_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete_32x322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Check in" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Check in1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logout2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ms_paint1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ms_paint2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -652,13 +655,13 @@
   <data name="BOPosition2_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BOPosition2_32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Activate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Activate2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BO_Quote" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BO_Quote1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="generalSMS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\generalSMS1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="vat-calculator" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vat-calculator1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="email" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\email2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
